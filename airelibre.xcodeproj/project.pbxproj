@@ -13,6 +13,8 @@
 		52C636E928028C99005CDBD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C636E728028C99005CDBD4 /* Main.storyboard */; };
 		52C636EB28028C9C005CDBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C636EA28028C9C005CDBD4 /* Assets.xcassets */; };
 		52C636EE28028C9C005CDBD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C636EC28028C9C005CDBD4 /* LaunchScreen.storyboard */; };
+		52C636F72802943E005CDBD4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636F62802943E005CDBD4 /* AboutViewController.swift */; };
+		52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636F928029A3D005CDBD4 /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		52C636EA28028C9C005CDBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C636ED28028C9C005CDBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C636EF28028C9C005CDBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		52C636F62802943E005CDBD4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		52C636F928029A3D005CDBD4 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +60,7 @@
 		52C636E028028C99005CDBD4 /* airelibre */ = {
 			isa = PBXGroup;
 			children = (
+				52C636F5280293F0005CDBD4 /* modules */,
 				52C636E128028C99005CDBD4 /* AppDelegate.swift */,
 				52C636E328028C99005CDBD4 /* SceneDelegate.swift */,
 				52C636E528028C99005CDBD4 /* ViewController.swift */,
@@ -65,6 +70,23 @@
 				52C636EF28028C9C005CDBD4 /* Info.plist */,
 			);
 			path = airelibre;
+			sourceTree = "<group>";
+		};
+		52C636F5280293F0005CDBD4 /* modules */ = {
+			isa = PBXGroup;
+			children = (
+				52C636F8280299FA005CDBD4 /* navigation */,
+				52C636F62802943E005CDBD4 /* AboutViewController.swift */,
+			);
+			path = modules;
+			sourceTree = "<group>";
+		};
+		52C636F8280299FA005CDBD4 /* navigation */ = {
+			isa = PBXGroup;
+			children = (
+				52C636F928029A3D005CDBD4 /* BaseTabBarController.swift */,
+			);
+			path = navigation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,7 +162,9 @@
 			files = (
 				52C636E628028C99005CDBD4 /* ViewController.swift in Sources */,
 				52C636E228028C99005CDBD4 /* AppDelegate.swift in Sources */,
+				52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */,
 				52C636E428028C99005CDBD4 /* SceneDelegate.swift in Sources */,
+				52C636F72802943E005CDBD4 /* AboutViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
