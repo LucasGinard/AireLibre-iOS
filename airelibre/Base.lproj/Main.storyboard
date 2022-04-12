@@ -30,6 +30,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="nUS-tg-opI" customClass="BaseTabBarController" customModule="airelibre" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="tEN-Za-mhn">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -64,10 +65,10 @@
             </objects>
             <point key="canvasLocation" x="1468" y="737"/>
         </scene>
-        <!--View Controller-->
+        <!--Home View Controller-->
         <scene sceneID="Vx7-4P-hbo">
             <objects>
-                <viewController id="2FE-2r-N33" customClass="ViewController" customModule="airelibre" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2FE-2r-N33" customClass="HomeViewController" customModule="airelibre" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6Pj-uy-mXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
