@@ -75,10 +75,33 @@
                     <view key="view" contentMode="scaleToFill" id="6Pj-uy-mXe">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OKi-9w-Ch5" userLabel="ViewMap">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="813"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A l L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-7y-MlN">
+                                <rect key="frame" x="356" y="68" width="33" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="R9t-mB-e8n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="T4A-7y-MlN" firstAttribute="top" secondItem="R9t-mB-e8n" secondAttribute="top" constant="24" id="fIR-vu-fUF"/>
+                            <constraint firstItem="OKi-9w-Ch5" firstAttribute="top" secondItem="6Pj-uy-mXe" secondAttribute="top" id="ff6-PR-Zse"/>
+                            <constraint firstItem="OKi-9w-Ch5" firstAttribute="leading" secondItem="R9t-mB-e8n" secondAttribute="leading" id="if8-ga-T4x"/>
+                            <constraint firstItem="R9t-mB-e8n" firstAttribute="trailing" secondItem="T4A-7y-MlN" secondAttribute="trailing" constant="25" id="mZE-Ez-cxz"/>
+                            <constraint firstItem="OKi-9w-Ch5" firstAttribute="bottom" secondItem="R9t-mB-e8n" secondAttribute="bottom" id="ufo-dJ-fZ1"/>
+                            <constraint firstItem="OKi-9w-Ch5" firstAttribute="trailing" secondItem="R9t-mB-e8n" secondAttribute="trailing" id="wD5-bD-oGH"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" systemItem="more" id="Mts-hq-GwO"/>
+                    <connections>
+                        <outlet property="viewMap" destination="OKi-9w-Ch5" id="wQI-NB-DJo"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yw3-5A-Zix" sceneMemberID="firstResponder"/>
             </objects>

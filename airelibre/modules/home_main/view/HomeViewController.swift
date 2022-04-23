@@ -10,36 +10,45 @@ import GoogleMaps
 
 class HomeViewController: UIViewController,CLLocationManagerDelegate {
 
-    private let manager = CLLocationManager()
+    @IBOutlet weak var viewMap: UIView!
     private var homeViewModel:HomeViewModel!
     private var sensorList:[SensorResponse] = []
     
+    private let manager = CLLocationManager()
+    private var mapView:GMSMapView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        GMSServices.provideAPIKey("")
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
-        
-        
-        GMSServices.provideAPIKey("")
-        let camera = GMSCameraPosition.camera(withLatitude: -33.86, longitude: 151.20, zoom: 6.0)
-        let mapView = GMSMapView.map(withFrame: self.view.frame, camera: camera)
-        self.view.addSubview(mapView)
-        // Creates a marker in the center of the map.
-        let marker = GMSMarker()
-        marker.position = CLLocationCoordinate2D(latitude: -33.86, longitude: 151.20)
-        marker.title = "Sydney"
-        marker.snippet = "Australia"
-        marker.map = mapView
+        createMap()
         callService()
     }
 
-
+    func createMap(){
+        let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: 10)
+        mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
+        mapView.isMyLocationEnabled = true
+        self.viewMap.addSubview(mapView)
+    }
+    
     func callService(){
         self.homeViewModel = HomeViewModel()
         self.homeViewModel.bindHomeViewModelToController = {
-            self.homeViewModel.sensor.forEach{
-                sensor in self.sensorList.append(sensor)
+            self.createMarker(list: self.homeViewModel.sensor)
+        }
+    }
+    
+    func createMarker(list:[SensorResponse]){
+        DispatchQueue.main.async {
+            for sensor in list{
+                self.sensorList.append(sensor)
+                let marker = GMSMarker()
+                marker.position = CLLocationCoordinate2D(latitude: sensor.latitude, longitude: sensor.longitude)
+                marker.title = sensor.description
+                marker.map = self.mapView
             }
         }
     }
