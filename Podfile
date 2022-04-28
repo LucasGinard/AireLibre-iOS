@@ -6,6 +6,7 @@ target 'airelibre' do
   use_frameworks!
   # Pods for airelibre
   pod 'GoogleMaps', '4.0.0'
-  
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Crashlytics'
 
 end
