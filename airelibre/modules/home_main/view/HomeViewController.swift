@@ -49,6 +49,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
                 marker.position = CLLocationCoordinate2D(latitude: sensor.latitude, longitude: sensor.longitude)
                 marker.title = sensor.description
                 marker.map = self.mapView
+                marker.icon = self.createMarkerWithText(sensor.quality.index)
             }
         }
     }
@@ -58,4 +59,37 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
             return
         }
     }
+    
+    func createMarkerWithText(_ index: Int) -> UIImage {
+        let color = UIColor.black
+        let string = "\(UInt(index))"
+        let attrs: [NSAttributedString.Key: Any] = [.foregroundColor: color]
+        let attrStr = NSAttributedString(string: string, attributes: attrs)
+        let image = self.markerImage(index: index)!
+        UIGraphicsBeginImageContext(image.size)
+        image.draw(in: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
+        var ejeX = 18
+        if(index >= 10){ ejeX = 15}
+        let rect = CGRect(x: CGFloat(ejeX), y: CGFloat(5), width: CGFloat(image.size.width), height: CGFloat(image.size.height))
+
+        attrStr.draw(in: rect)
+
+        let markerImage = UIGraphicsGetImageFromCurrentImageContext()!
+        UIGraphicsEndImageContext()
+        return markerImage
+    }
+    
+    func markerImage(index:Int)-> UIImage?{
+        switch(index){
+            case 0...50: return UIImage(named:"MarkerGreen")
+            case 51...100: return UIImage(named:"MarkerYellow")
+            case 101...150: return UIImage(named:"MarkerOrange")
+            case 151...200: return UIImage(named:"MarkerRed")
+            case 201...300:  return UIImage(named:"MarkerPurple")
+            default: return UIImage(named:"MarkerDanger")
+        }
+        return nil
+    }
+    
+    
 }
