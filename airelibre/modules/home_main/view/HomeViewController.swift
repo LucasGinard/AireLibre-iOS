@@ -26,12 +26,33 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
         createMap()
         callService()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        markerTheme()
+    }
 
     func createMap(){
         let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: 10)
         mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
         mapView.isMyLocationEnabled = true
+        markerTheme()
         self.viewMap.addSubview(mapView)
+    }
+    
+    func markerTheme(){
+        if self.traitCollection.userInterfaceStyle == .dark {
+            do {
+                if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                  mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                } else {
+                  NSLog("Unable to find style.json")
+                }
+              } catch {
+                NSLog("One or more of the map styles failed to load. \(error)")
+            }
+        } else {
+            mapView.mapStyle = nil
+        }
     }
     
     func callService(){
