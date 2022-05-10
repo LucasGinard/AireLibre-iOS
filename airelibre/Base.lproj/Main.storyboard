@@ -145,7 +145,7 @@
                             <constraint firstItem="oRg-L6-uqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="lB0-OA-DX7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="contacts" id="Si7-Pu-ekR"/>
+                    <tabBarItem key="tabBarItem" image="iconAbout" id="Si7-Pu-ekR"/>
                     <connections>
                         <outlet property="btnTwitter" destination="GwT-Bc-jO3" id="2M3-Fa-buP"/>
                         <outlet property="btnWeb" destination="HkO-Dd-AOf" id="djf-ce-rA1"/>
@@ -178,6 +178,7 @@
                         </userDefinedRuntimeAttribute>
                     </userDefinedRuntimeAttributes>
                     <connections>
+                        <outlet property="tabBar" destination="tEN-Za-mhn" id="ich-ML-GuY"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Pjv-YF-z39"/>
                         <segue destination="2FE-2r-N33" kind="relationship" relationship="viewControllers" id="RT6-Xd-52p"/>
                         <segue destination="gza-5A-taF" kind="relationship" relationship="viewControllers" id="Jhb-TJ-SXX"/>
@@ -197,7 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="JLD-Ap-LRD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="search" id="1T8-3m-imA"/>
+                    <tabBarItem key="tabBarItem" image="iconConfig" id="1T8-3m-imA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csg-gj-9oI" sceneMemberID="firstResponder"/>
             </objects>
@@ -233,8 +234,11 @@
                             <constraint firstItem="OKi-9w-Ch5" firstAttribute="trailing" secondItem="R9t-mB-e8n" secondAttribute="trailing" id="wD5-bD-oGH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="more" id="Mts-hq-GwO"/>
+                    <tabBarItem key="tabBarItem" image="iconSensor" id="Mts-hq-GwO">
+                        <color key="badgeColor" red="0.1429682672" green="0.46770316360000003" blue="0.26749515530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBarItem>
                     <connections>
+                        <outlet property="tvTitle" destination="T4A-7y-MlN" id="g7k-mp-17p"/>
                         <outlet property="viewMap" destination="OKi-9w-Ch5" id="wQI-NB-DJo"/>
                     </connections>
                 </viewController>
@@ -244,6 +248,9 @@
         </scene>
     </scenes>
     <resources>
+        <image name="iconAbout" width="35" height="35"/>
+        <image name="iconConfig" width="35" height="35"/>
+        <image name="iconSensor" width="35" height="35"/>
         <image name="iconTwitter" width="320" height="320"/>
         <image name="iconWeb" width="320" height="320"/>
         <systemColor name="labelColor">
