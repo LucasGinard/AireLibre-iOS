@@ -145,7 +145,7 @@
                             <constraint firstItem="oRg-L6-uqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="lB0-OA-DX7"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="iconAbout" id="Si7-Pu-ekR"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconAbout" id="Si7-Pu-ekR"/>
                     <connections>
                         <outlet property="btnTwitter" destination="GwT-Bc-jO3" id="2M3-Fa-buP"/>
                         <outlet property="btnWeb" destination="HkO-Dd-AOf" id="djf-ce-rA1"/>
@@ -168,7 +168,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" red="0.1429682672" green="0.46770316360000003" blue="0.26749515530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" systemColor="labelColor"/>
+                        <color key="tintColor" systemColor="systemBackgroundColor"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="selectedImageTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -198,7 +198,7 @@
                         <viewLayoutGuide key="safeArea" id="JLD-Ap-LRD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" image="iconConfig" id="1T8-3m-imA"/>
+                    <tabBarItem key="tabBarItem" title="" image="iconConfig" id="1T8-3m-imA"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csg-gj-9oI" sceneMemberID="firstResponder"/>
             </objects>
@@ -222,10 +222,114 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-Ud-Wnn">
+                                <rect key="frame" x="15" y="572" width="384" height="241"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU7-y0-i5d">
+                                        <rect key="frame" x="15" y="15" width="69" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor, Asuncion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V1E-Um-xCd">
+                                        <rect key="frame" x="15" y="40.5" width="145" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Estado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Ui-XL-3rp">
+                                        <rect key="frame" x="15" y="70" width="63" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="hhl-tb-faQ">
+                                        <rect key="frame" x="15" y="95.5" width="354" height="64"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚠️🔴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68P-KA-4HK">
+                                                <rect key="frame" x="0.0" y="23" width="45" height="18"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="45" id="qtQ-5n-CMd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riesgo General para las personas,efecto mas graaves en personas sensibles" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-Sx-QEM">
+                                                <rect key="frame" x="52" y="0.0" width="302" height="64"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escala AQI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-Ic-9XZ">
+                                        <rect key="frame" x="15" y="167.5" width="93.5" height="21.5"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuW-qO-jKS">
+                                        <rect key="frame" x="15" y="193" width="36.5" height="24"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="20"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3lC-h6-olu">
+                                        <rect key="frame" x="351" y="5" width="25" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="YY4-fx-kIB"/>
+                                            <constraint firstAttribute="height" constant="25" id="j3f-zc-vX4"/>
+                                        </constraints>
+                                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" backgroundImage="iconWeb"/>
+                                        <connections>
+                                            <action selector="onClickWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMK-8x-COF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.13982146979999999" green="0.4661616683" blue="0.26757335659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="uuW-qO-jKS" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="399-Pa-A9e"/>
+                                    <constraint firstItem="aUA-Ic-9XZ" firstAttribute="top" secondItem="hhl-tb-faQ" secondAttribute="bottom" constant="8" id="5g0-od-yyY"/>
+                                    <constraint firstItem="5Ui-XL-3rp" firstAttribute="top" secondItem="V1E-Um-xCd" secondAttribute="bottom" constant="8" id="G7l-oZ-ZqY"/>
+                                    <constraint firstAttribute="width" secondItem="BT1-Ud-Wnn" secondAttribute="height" multiplier="180:113" id="Ipe-gI-c7D"/>
+                                    <constraint firstAttribute="trailing" secondItem="3lC-h6-olu" secondAttribute="trailing" constant="8" id="Jtb-Q9-hur"/>
+                                    <constraint firstItem="QU7-y0-i5d" firstAttribute="top" secondItem="BT1-Ud-Wnn" secondAttribute="top" constant="15" id="KPY-md-zfn"/>
+                                    <constraint firstAttribute="trailing" secondItem="hhl-tb-faQ" secondAttribute="trailing" constant="15" id="LdG-fU-la9"/>
+                                    <constraint firstItem="QU7-y0-i5d" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="Qc2-zj-YSb"/>
+                                    <constraint firstItem="5Ui-XL-3rp" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="Qsk-1e-7gx"/>
+                                    <constraint firstItem="hhl-tb-faQ" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="aJs-7P-D6K"/>
+                                    <constraint firstItem="V1E-Um-xCd" firstAttribute="top" secondItem="QU7-y0-i5d" secondAttribute="bottom" constant="4" id="c7m-up-DGg"/>
+                                    <constraint firstItem="aUA-Ic-9XZ" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="dQx-BF-kJV"/>
+                                    <constraint firstItem="hhl-tb-faQ" firstAttribute="top" secondItem="5Ui-XL-3rp" secondAttribute="bottom" constant="4" id="jy9-1t-COW"/>
+                                    <constraint firstItem="3lC-h6-olu" firstAttribute="top" secondItem="BT1-Ud-Wnn" secondAttribute="top" constant="5" id="mhY-SN-zWx"/>
+                                    <constraint firstItem="V1E-Um-xCd" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="nUB-8j-C3h"/>
+                                    <constraint firstItem="uuW-qO-jKS" firstAttribute="top" secondItem="aUA-Ic-9XZ" secondAttribute="bottom" constant="4" id="rbF-ws-3bH"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                        <color key="value" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusTop">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="R9t-mB-e8n"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="BT1-Ud-Wnn" firstAttribute="leading" secondItem="R9t-mB-e8n" secondAttribute="leading" constant="15" id="4tk-NJ-hXr"/>
+                            <constraint firstItem="R9t-mB-e8n" firstAttribute="trailing" secondItem="BT1-Ud-Wnn" secondAttribute="trailing" constant="15" id="Lv3-B1-pEu"/>
+                            <constraint firstItem="R9t-mB-e8n" firstAttribute="bottom" secondItem="BT1-Ud-Wnn" secondAttribute="bottom" id="NF7-lZ-wVs"/>
                             <constraint firstItem="T4A-7y-MlN" firstAttribute="top" secondItem="R9t-mB-e8n" secondAttribute="top" constant="24" id="fIR-vu-fUF"/>
                             <constraint firstItem="OKi-9w-Ch5" firstAttribute="top" secondItem="6Pj-uy-mXe" secondAttribute="top" id="ff6-PR-Zse"/>
                             <constraint firstItem="OKi-9w-Ch5" firstAttribute="leading" secondItem="R9t-mB-e8n" secondAttribute="leading" id="if8-ga-T4x"/>
@@ -234,17 +338,22 @@
                             <constraint firstItem="OKi-9w-Ch5" firstAttribute="trailing" secondItem="R9t-mB-e8n" secondAttribute="trailing" id="wD5-bD-oGH"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" image="iconSensor" id="Mts-hq-GwO">
+                    <tabBarItem key="tabBarItem" title="" image="iconSensor" id="Mts-hq-GwO">
+                        <inset key="landscapeImageInsets" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
                         <color key="badgeColor" red="0.1429682672" green="0.46770316360000003" blue="0.26749515530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="tvInfoDescription" destination="TPY-Sx-QEM" id="WnV-WC-7rU"/>
+                        <outlet property="tvInfoEmoji" destination="68P-KA-4HK" id="rOu-YQ-z74"/>
+                        <outlet property="tvInfoScale" destination="uuW-qO-jKS" id="DJ7-d1-l2r"/>
+                        <outlet property="tvInfoTitle" destination="V1E-Um-xCd" id="PeV-WI-dKy"/>
                         <outlet property="tvTitle" destination="T4A-7y-MlN" id="g7k-mp-17p"/>
                         <outlet property="viewMap" destination="OKi-9w-Ch5" id="wQI-NB-DJo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yw3-5A-Zix" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="768" y="737"/>
+            <point key="canvasLocation" x="766.66666666666674" y="736.60714285714278"/>
         </scene>
     </scenes>
     <resources>
@@ -253,9 +362,6 @@
         <image name="iconSensor" width="35" height="35"/>
         <image name="iconTwitter" width="320" height="320"/>
         <image name="iconWeb" width="320" height="320"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

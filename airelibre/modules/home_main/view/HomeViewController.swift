@@ -8,9 +8,15 @@
 import UIKit
 import GoogleMaps
 
-class HomeViewController: UIViewController,CLLocationManagerDelegate {
+class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDelegate {
 
+    @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var viewMap: UIView!
+    @IBOutlet weak var tvInfoTitle: UILabel!
+    @IBOutlet weak var tvInfoEmoji: UILabel!
+    @IBOutlet weak var tvInfoDescription: UILabel!
+    @IBOutlet weak var tvInfoScale: UILabel!
+    
     private var homeViewModel:HomeViewModel!
     private var sensorList:[SensorResponse] = []
     
@@ -25,16 +31,28 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
         manager.startUpdatingLocation()
         createMap()
         callService()
+        configureUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         markerTheme()
+        configureUI()
+    }
+    
+    func configureUI(){
+        if self.traitCollection.userInterfaceStyle == .dark {
+            tvTitle.textColor = .white
+        }else{
+            tvTitle.textColor = .black
+        }
+        
     }
 
     func createMap(){
         let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: 10)
         mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
         mapView.isMyLocationEnabled = true
+        mapView.delegate = self
         markerTheme()
         self.viewMap.addSubview(mapView)
     }
@@ -75,6 +93,18 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
         }
     }
     
+    func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
+        let markerObj = sensorList.filter {$0.description.contains(marker.title!)}
+         if(marker != nil){
+             mapView.camera = GMSCameraPosition.camera(withLatitude: markerObj[0].latitude, longitude: markerObj[0].longitude, zoom: 10)
+             tvInfoTitle.text = markerObj[0].description
+             tvInfoScale.text = "\(markerObj[0].quality.index)"
+             mapView.selectedMarker = marker
+         }
+            
+        return true
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
@@ -83,14 +113,18 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate {
     
     func createMarkerWithText(_ index: Int) -> UIImage {
         let color = UIColor.black
-        let string = "\(UInt(index))"
+        let title = "\(UInt(index))"
         let attrs: [NSAttributedString.Key: Any] = [.foregroundColor: color]
-        let attrStr = NSAttributedString(string: string, attributes: attrs)
+        let attrStr = NSAttributedString(string: title, attributes: attrs)
         let image = self.markerImage(index: index)!
         UIGraphicsBeginImageContext(image.size)
         image.draw(in: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
         var ejeX = 18
-        if(index >= 10){ ejeX = 15}
+        switch(String(index).count){
+            case 2: ejeX = 15
+            case 3: ejeX = 13
+            default: break
+        }
         let rect = CGRect(x: CGFloat(ejeX), y: CGFloat(5), width: CGFloat(image.size.width), height: CGFloat(image.size.height))
 
         attrStr.draw(in: rect)
