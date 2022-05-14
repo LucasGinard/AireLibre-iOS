@@ -12,13 +12,17 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
 
     @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var viewMap: UIView!
-    @IBOutlet weak var tvInfoTitle: UILabel!
-    @IBOutlet weak var tvInfoEmoji: UILabel!
+    
     @IBOutlet weak var tvInfoDescription: UILabel!
     @IBOutlet weak var tvInfoScale: UILabel!
+    @IBOutlet weak var tvInfoTitle: UILabel!
+    @IBOutlet weak var tvInfoEmoji: UILabel!
+    @IBOutlet weak var viewInfoSensor: UIView!
+    @IBOutlet weak var btnCloseInfoSensor: UIButton!
     
     private var homeViewModel:HomeViewModel!
     private var sensorList:[SensorResponse] = []
+    private var sensor:SensorResponse!
     
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
@@ -32,6 +36,19 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         createMap()
         callService()
         configureUI()
+    }
+    
+    @IBAction func clickSensorInfoClose(_ sender: Any) {
+        UIView.animate(
+            withDuration: 0.9,
+            delay: 0.0,
+            options: .curveLinear,
+            animations: {
+                self.viewInfoSensor?.frame.origin.y = 10000
+
+        }) { (completed) in
+            self.viewInfoSensor?.isHidden = true
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -96,10 +113,8 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         let markerObj = sensorList.filter {$0.description.contains(marker.title!)}
          if(marker != nil){
-             mapView.camera = GMSCameraPosition.camera(withLatitude: markerObj[0].latitude, longitude: markerObj[0].longitude, zoom: 10)
-             tvInfoTitle.text = markerObj[0].description
-             tvInfoScale.text = "\(markerObj[0].quality.index)"
              mapView.selectedMarker = marker
+             onClickInfoSensor(sensor: markerObj[0])
          }
             
         return true
@@ -108,6 +123,21 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
+        }
+        if let location = locations.last{
+            var flagLocation = Double.greatestFiniteMagnitude
+            sensorList.forEach { SensorResponse in
+                let locationCercano = location.distance(from: CLLocation(latitude: SensorResponse.latitude, longitude: SensorResponse.longitude))
+                if(locationCercano < flagLocation){
+                    flagLocation = locationCercano
+                    sensor = SensorResponse
+                }
+            }
+            if(sensor != nil){
+                if(self.viewInfoSensor?.isHidden == true){
+                    onClickInfoSensor(sensor: sensor)
+                }
+            }
         }
     }
     
@@ -146,5 +176,33 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         return nil
     }
     
+    func emojiScale(index:Int)->String{
+        switch(index){
+            case 0...50: return "🟢👍"
+            case 51...100: return "🟡😐"
+            case 101...150: return "🟠⚠"
+            case 151...200: return "🔴⚠"
+            case 201...300:  return "🟣☣️"
+            default: return "🟤☠️"
+        }
+    }
     
+    func slideUpInfo(){
+        UIView.animate(
+            withDuration: 0.5,
+            delay: 0.0,
+            options: .curveLinear,
+            animations: {
+                self.viewInfoSensor?.frame.origin.y = -100
+        })
+    }
+    
+    func onClickInfoSensor(sensor:SensorResponse){
+        mapView.camera = GMSCameraPosition.camera(withLatitude: sensor.latitude, longitude: sensor.longitude, zoom: 10)
+        tvInfoTitle.text = sensor.description
+        tvInfoScale.text = "\(sensor.quality.index)"
+        tvInfoEmoji.text = emojiScale(index: sensor.quality.index)
+        self.viewInfoSensor?.isHidden = false
+        slideUpInfo()
+    }
 }

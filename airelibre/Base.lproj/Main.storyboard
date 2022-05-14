@@ -222,7 +222,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-Ud-Wnn">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-Ud-Wnn">
                                 <rect key="frame" x="15" y="572" width="384" height="241"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU7-y0-i5d">
@@ -285,6 +285,7 @@
                                         <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                         <state key="normal" backgroundImage="iconWeb"/>
                                         <connections>
+                                            <action selector="clickSensorInfoClose:" destination="2FE-2r-N33" eventType="touchUpInside" id="Mws-cr-aeg"/>
                                             <action selector="onClickWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMK-8x-COF"/>
                                         </connections>
                                     </button>
@@ -343,11 +344,13 @@
                         <color key="badgeColor" red="0.1429682672" green="0.46770316360000003" blue="0.26749515530000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBarItem>
                     <connections>
+                        <outlet property="btnCloseInfoSensor" destination="3lC-h6-olu" id="vjo-Bf-TiJ"/>
                         <outlet property="tvInfoDescription" destination="TPY-Sx-QEM" id="WnV-WC-7rU"/>
                         <outlet property="tvInfoEmoji" destination="68P-KA-4HK" id="rOu-YQ-z74"/>
                         <outlet property="tvInfoScale" destination="uuW-qO-jKS" id="DJ7-d1-l2r"/>
                         <outlet property="tvInfoTitle" destination="V1E-Um-xCd" id="PeV-WI-dKy"/>
                         <outlet property="tvTitle" destination="T4A-7y-MlN" id="g7k-mp-17p"/>
+                        <outlet property="viewInfoSensor" destination="BT1-Ud-Wnn" id="cBe-cK-OKO"/>
                         <outlet property="viewMap" destination="OKi-9w-Ch5" id="wQI-NB-DJo"/>
                     </connections>
                 </viewController>
