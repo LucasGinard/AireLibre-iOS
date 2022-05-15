@@ -36,6 +36,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         createMap()
         callService()
         configureUI()
+        gestureDownInfoMarker()
     }
     
     @IBAction func clickSensorInfoClose(_ sender: Any) {
@@ -56,7 +57,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         configureUI()
     }
     
-    func configureUI(){
+    private func configureUI(){
         if self.traitCollection.userInterfaceStyle == .dark {
             tvTitle.textColor = .white
         }else{
@@ -65,7 +66,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         
     }
 
-    func createMap(){
+    private func createMap(){
         let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: 10)
         mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
         mapView.isMyLocationEnabled = true
@@ -74,7 +75,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         self.viewMap.addSubview(mapView)
     }
     
-    func markerTheme(){
+    private func markerTheme(){
         if self.traitCollection.userInterfaceStyle == .dark {
             do {
                 if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
@@ -90,14 +91,14 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         }
     }
     
-    func callService(){
+    private func callService(){
         self.homeViewModel = HomeViewModel()
         self.homeViewModel.bindHomeViewModelToController = {
             self.createMarker(list: self.homeViewModel.sensor)
         }
     }
     
-    func createMarker(list:[SensorResponse]){
+    private func createMarker(list:[SensorResponse]){
         DispatchQueue.main.async {
             for sensor in list{
                 self.sensorList.append(sensor)
@@ -141,7 +142,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         }
     }
     
-    func createMarkerWithText(_ index: Int) -> UIImage {
+    private func createMarkerWithText(_ index: Int) -> UIImage {
         let color = UIColor.black
         let title = "\(UInt(index))"
         let attrs: [NSAttributedString.Key: Any] = [.foregroundColor: color]
@@ -164,7 +165,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         return markerImage
     }
     
-    func markerImage(index:Int)-> UIImage?{
+    private func markerImage(index:Int)-> UIImage?{
         switch(index){
             case 0...50: return UIImage(named:"MarkerGreen")
             case 51...100: return UIImage(named:"MarkerYellow")
@@ -176,7 +177,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         return nil
     }
     
-    func emojiScale(index:Int)->String{
+    private func emojiScale(index:Int)->String{
         switch(index){
             case 0...50: return "🟢👍"
             case 51...100: return "🟡😐"
@@ -187,7 +188,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         }
     }
     
-    func slideUpInfo(){
+    private func slideUpInfo(){
         UIView.animate(
             withDuration: 0.5,
             delay: 0.0,
@@ -197,12 +198,33 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         })
     }
     
-    func onClickInfoSensor(sensor:SensorResponse){
+    private func onClickInfoSensor(sensor:SensorResponse){
         mapView.camera = GMSCameraPosition.camera(withLatitude: sensor.latitude, longitude: sensor.longitude, zoom: 10)
         tvInfoTitle.text = sensor.description
         tvInfoScale.text = "\(sensor.quality.index)"
         tvInfoEmoji.text = emojiScale(index: sensor.quality.index)
         self.viewInfoSensor?.isHidden = false
         slideUpInfo()
+    }
+    
+    private func gestureDownInfoMarker(){
+        let downSwipe = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipes(_:)))
+        downSwipe.direction = .down
+        viewInfoSensor.addGestureRecognizer(downSwipe)
+    }
+    
+    @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
+        if (sender.direction == .down) {
+            UIView.animate(
+                withDuration: 1,
+                delay: 0.0,
+                options: .curveLinear,
+                animations: {
+                    self.viewInfoSensor?.frame.origin.y = 10000
+
+            }) { (completed) in
+                self.viewInfoSensor?.isHidden = true
+            }
+        }
     }
 }
