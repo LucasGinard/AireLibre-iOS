@@ -19,9 +19,17 @@ class ConfigViewController: UIViewController {
     }
 
     @IBAction func switchDarkMode(_ sender: Any) {
-        if #available(iOS 13.0, *) {
-            overrideUserInterfaceStyle = .dark
+        if swDarkMode.isOn{
+            if #available(iOS 13.0, *) {
+                overrideUserInterfaceStyle = .dark
+            }
+        }else{
+            if #available(iOS 13.0, *) {
+                overrideUserInterfaceStyle = .light
+            }
         }
+
+        
     }
     
 }
