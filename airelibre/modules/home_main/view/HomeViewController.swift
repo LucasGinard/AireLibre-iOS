@@ -23,13 +23,13 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     private var homeViewModel:HomeViewModel!
     private var sensorList:[SensorResponse] = []
     private var sensor:SensorResponse!
-    
+    private let theme = UserDefaults.standard.string(forKey: "isDarkMode")
+
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        GMSServices.provideAPIKey("")
         manager.delegate = self
         manager.requestWhenInUseAuthorization()
         manager.startUpdatingLocation()
@@ -55,15 +55,23 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     override func viewWillAppear(_ animated: Bool) {
         markerTheme()
         configureUI()
+        themeApp()
     }
     
     private func configureUI(){
-        if self.traitCollection.userInterfaceStyle == .dark {
-            tvTitle.textColor = .white
+        if(theme == nil){
+            if(self.traitCollection.userInterfaceStyle == .dark){
+                tvTitle.textColor = .white
+            }else{
+                tvTitle.textColor = .black
+            }
         }else{
-            tvTitle.textColor = .black
+            if(theme == "Dark"){
+                tvTitle.textColor = .white
+            }else{
+                tvTitle.textColor = .black
+            }
         }
-        
     }
 
     private func createMap(){
@@ -76,19 +84,32 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
     
     private func markerTheme(){
-        if self.traitCollection.userInterfaceStyle == .dark {
-            do {
-                if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
-                  mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-                } else {
-                  NSLog("Unable to find style.json")
-                }
-              } catch {
-                NSLog("One or more of the map styles failed to load. \(error)")
+        if(theme == nil){
+            if self.traitCollection.userInterfaceStyle == .dark {
+                do {
+                    if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                      mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                    }
+                  } catch {
+                    NSLog("One or more of the map styles failed to load. \(error)")
+                  }
+            } else {
+                mapView.mapStyle = nil
             }
-        } else {
-            mapView.mapStyle = nil
+        }else{
+            if(theme == "Dark"){
+                do {
+                    if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                      mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                    }
+                  } catch {
+                    NSLog("One or more of the map styles failed to load. \(error)")
+                  }
+            }else{
+                mapView.mapStyle = nil
+            }
         }
+        
     }
     
     private func callService(){

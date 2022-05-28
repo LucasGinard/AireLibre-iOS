@@ -20,6 +20,10 @@ class AboutViewController: UIViewController {
         super.viewDidLoad()
         self.setupLabelClicks()
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        themeApp()
+    }
         
     @IBAction func onClickTwitter(_ sender: Any) {
         let lowerCaseSocialNetworkName = "twitter"

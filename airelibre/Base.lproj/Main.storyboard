@@ -214,6 +214,9 @@
                                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yfp-Nl-s49">
                                                 <rect key="frame" x="215.5" y="4.5" width="51" height="31"/>
                                                 <color key="onTintColor" red="0.13982146979999999" green="0.4661616683" blue="0.26757335659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <connections>
+                                                    <action selector="switchLocation:" destination="gza-5A-taF" eventType="valueChanged" id="c44-vn-VVy"/>
+                                                </connections>
                                             </switch>
                                         </subviews>
                                     </stackView>
