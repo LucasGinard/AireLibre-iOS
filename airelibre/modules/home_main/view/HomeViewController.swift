@@ -126,6 +126,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
                 let marker = GMSMarker()
                 marker.position = CLLocationCoordinate2D(latitude: sensor.latitude, longitude: sensor.longitude)
                 marker.title = sensor.description
+                marker.snippet = self.qualityScaleText(index: sensor.quality.index)
                 marker.map = self.mapView
                 marker.icon = self.createMarkerWithText(sensor.quality.index)
             }
@@ -186,29 +187,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         return markerImage
     }
     
-    private func markerImage(index:Int)-> UIImage?{
-        switch(index){
-            case 0...50: return UIImage(named:"MarkerGreen")
-            case 51...100: return UIImage(named:"MarkerYellow")
-            case 101...150: return UIImage(named:"MarkerOrange")
-            case 151...200: return UIImage(named:"MarkerRed")
-            case 201...300:  return UIImage(named:"MarkerPurple")
-            default: return UIImage(named:"MarkerDanger")
-        }
-        return nil
-    }
-    
-    private func emojiScale(index:Int)->String{
-        switch(index){
-            case 0...50: return "🟢👍"
-            case 51...100: return "🟡😐"
-            case 101...150: return "🟠⚠"
-            case 151...200: return "🔴⚠"
-            case 201...300:  return "🟣☣️"
-            default: return "🟤☠️"
-        }
-    }
-    
     private func slideUpInfo(){
         UIView.animate(
             withDuration: 0.5,
@@ -225,7 +203,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         if(tvInfoTitle.text == sensor.description){animationON = false}
         tvInfoTitle.text = sensor.description
         tvInfoScale.text = "\(sensor.quality.index)"
-        tvInfoEmoji.text = emojiScale(index: sensor.quality.index)
+        tvInfoEmoji.text = self.emojiScale(index: sensor.quality.index)
         self.viewInfoSensor?.isHidden = false
         if(animationON){slideUpInfo()}else{
             self.viewInfoSensor?.frame.origin.y = 405

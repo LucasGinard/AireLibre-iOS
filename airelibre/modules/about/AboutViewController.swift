@@ -16,13 +16,26 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var btnTwitter: UIButton!
     @IBOutlet weak var btnWeb: UIButton!
     
+    private let linkColorDark = UIColor.init("176EFF")
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLabelClicks()
+        configureUI()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         themeApp()
+        configureUI()
+    }
+    
+    private func configureUI(){
+        if(isDarkTheme()){
+            self.tvSeeProject.textColor = linkColorDark
+            self.tvLicense.textColor = linkColorDark
+            self.tvCreator.textColor = linkColorDark
+            self.tvIconApp.textColor = linkColorDark
+        }
     }
         
     @IBAction func onClickTwitter(_ sender: Any) {
