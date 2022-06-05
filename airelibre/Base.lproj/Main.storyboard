@@ -28,7 +28,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-L6-uqX">
-                                <rect key="frame" x="15" y="196" width="384" height="504.5"/>
+                                <rect key="frame" x="15" y="193.5" width="384" height="509"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Qué es AireLibre?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-at-h6y">
                                         <rect key="frame" x="118" y="0.0" width="148.5" height="19"/>
@@ -98,38 +98,49 @@
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AireLibre es un proyecto libre y de código abierto bajo 📜licencia:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPR-iF-qkH">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AireLibre es un proyecto libre y de código abierto bajo licencia:" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qPR-iF-qkH">
                                         <rect key="frame" x="9" y="330.5" width="366.5" height="38"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGPLv3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gso-DV-7md">
-                                        <rect key="frame" x="162.5" y="378.5" width="59" height="16"/>
-                                        <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="14"/>
-                                        <color key="textColor" systemColor="linkColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="p4p-0X-seW">
+                                        <rect key="frame" x="151" y="378.5" width="82" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📜" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ldc-hZ-gsn">
+                                                <rect key="frame" x="0.0" y="0.0" width="23" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AGPLv3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gso-DV-7md">
+                                                <rect key="frame" x="23" y="0.0" width="59" height="20.5"/>
+                                                <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="14"/>
+                                                <color key="textColor" systemColor="linkColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App desarrollada por:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-oc-GAj">
-                                        <rect key="frame" x="106.5" y="404.5" width="171" height="19"/>
+                                        <rect key="frame" x="106.5" y="409" width="171" height="19"/>
                                         <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucas Ginard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5W-X7-sA1">
-                                        <rect key="frame" x="133.5" y="433.5" width="117.5" height="16"/>
+                                        <rect key="frame" x="133.5" y="438" width="117.5" height="16"/>
                                         <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="14"/>
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen Ilustrativa original de:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5Y-fa-hly">
-                                        <rect key="frame" x="73" y="459.5" width="238.5" height="19"/>
+                                        <rect key="frame" x="73" y="464" width="238.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pch.vector - www.freepik.es" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-A3-J2I">
-                                        <rect key="frame" x="60.5" y="488.5" width="263.5" height="16"/>
+                                        <rect key="frame" x="60.5" y="493" width="263.5" height="16"/>
                                         <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="14"/>
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
@@ -273,6 +284,7 @@
                     <connections>
                         <outlet property="swDarkMode" destination="n2I-UY-baU" id="x55-OG-YGs"/>
                         <outlet property="swLocation" destination="Yfp-Nl-s49" id="j6R-56-zbl"/>
+                        <outlet property="tvVersion" destination="uO5-lR-jsW" id="0Ac-1E-Wke"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Csg-gj-9oI" sceneMemberID="firstResponder"/>

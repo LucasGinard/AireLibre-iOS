@@ -24,7 +24,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     private var sensorList:[SensorResponse] = []
     private var sensor:SensorResponse!
     private let theme = UserDefaults.standard.string(forKey: "isDarkMode")
-
+    
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
     
@@ -39,6 +39,12 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         gestureDownInfoMarker()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        mapTheme()
+        configureUI()
+        themeApp()
+    }
+    
     @IBAction func clickSensorInfoClose(_ sender: Any) {
         UIView.animate(
             withDuration: 0.9,
@@ -50,12 +56,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         }) { (completed) in
             self.viewInfoSensor?.isHidden = true
         }
-    }
-    
-    override func viewWillAppear(_ animated: Bool) {
-        markerTheme()
-        configureUI()
-        themeApp()
     }
     
     private func configureUI(){
@@ -79,11 +79,11 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
-        markerTheme()
+        mapTheme()
         self.viewMap.addSubview(mapView)
     }
     
-    private func markerTheme(){
+    private func mapTheme(){
         if(theme == nil){
             if self.traitCollection.userInterfaceStyle == .dark {
                 do {
@@ -221,11 +221,15 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     
     private func onClickInfoSensor(sensor:SensorResponse){
         mapView.camera = GMSCameraPosition.camera(withLatitude: sensor.latitude, longitude: sensor.longitude, zoom: 10)
+        var animationON = true
+        if(tvInfoTitle.text == sensor.description){animationON = false}
         tvInfoTitle.text = sensor.description
         tvInfoScale.text = "\(sensor.quality.index)"
         tvInfoEmoji.text = emojiScale(index: sensor.quality.index)
         self.viewInfoSensor?.isHidden = false
-        slideUpInfo()
+        if(animationON){slideUpInfo()}else{
+            self.viewInfoSensor?.frame.origin.y = 405
+        }
     }
     
     private func gestureDownInfoMarker(){

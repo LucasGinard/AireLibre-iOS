@@ -12,6 +12,7 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
 
     @IBOutlet weak var swDarkMode: UISwitch!
     @IBOutlet weak var swLocation: UISwitch!
+    @IBOutlet weak var tvVersion: UILabel!
     
     private let manager = CLLocationManager()
 
@@ -19,6 +20,7 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
         super.viewDidLoad()
         manager.delegate = self
         configureUI()
+        themeApp()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -49,6 +51,7 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
         } else {
             swLocation.isOn = false
         }
+        tvVersion.text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
