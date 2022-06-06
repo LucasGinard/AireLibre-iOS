@@ -23,6 +23,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     private var homeViewModel:HomeViewModel!
     private var sensorList:[SensorResponse] = []
     private var sensor:SensorResponse!
+    private var showSensorFavorite:Bool = true
     private let theme = UserDefaults.standard.string(forKey: "isDarkMode")
     
     private let manager = CLLocationManager()
@@ -43,6 +44,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         mapTheme()
         configureUI()
         themeApp()
+        showSensorFavorite = true
     }
     
     @IBAction func clickSensorInfoClose(_ sender: Any) {
@@ -139,18 +141,21 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
             return
         }
         if let location = locations.last{
-            var flagLocation = Double.greatestFiniteMagnitude
-            sensorList.forEach { SensorResponse in
-                let locationCercano = location.distance(from: CLLocation(latitude: SensorResponse.latitude, longitude: SensorResponse.longitude))
-                if(locationCercano < flagLocation){
-                    flagLocation = locationCercano
-                    sensor = SensorResponse
+            if(showSensorFavorite){
+                var flagLocation = Double.greatestFiniteMagnitude
+                sensorList.forEach { SensorResponse in
+                    let locationCercano = location.distance(from: CLLocation(latitude: SensorResponse.latitude, longitude: SensorResponse.longitude))
+                    if(locationCercano < flagLocation){
+                        flagLocation = locationCercano
+                        sensor = SensorResponse
+                    }
                 }
-            }
-            if(sensor != nil){
-                if(self.viewInfoSensor?.isHidden == true){
-                    onClickInfoSensor(sensor: sensor)
+                if(sensor != nil){
+                    if(self.viewInfoSensor?.isHidden == true){
+                        onClickInfoSensor(sensor: sensor)
+                    }
                 }
+                showSensorFavorite = false
             }
         }
     }
@@ -162,14 +167,14 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         let attrStr = NSAttributedString(string: title, attributes: attrs)
         let image = self.markerImage(index: index)!
         UIGraphicsBeginImageContext(image.size)
-        image.draw(in: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(image.size.width), height: CGFloat(image.size.height)))
-        var ejeX = 18
+        image.draw(in: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(image.size.width+10), height: CGFloat(image.size.height+10)))
+        var ejeX = 22
         switch(String(index).count){
-            case 2: ejeX = 15
-            case 3: ejeX = 13
+            case 2: ejeX = 19
+            case 3: ejeX = 16
             default: break
         }
-        let rect = CGRect(x: CGFloat(ejeX), y: CGFloat(5), width: CGFloat(image.size.width), height: CGFloat(image.size.height))
+        let rect = CGRect(x: CGFloat(ejeX), y: CGFloat(7), width: CGFloat(image.size.width), height: CGFloat(image.size.height))
 
         attrStr.draw(in: rect)
 
