@@ -46,16 +46,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
     
     @IBAction func clickSensorInfoClose(_ sender: Any) {
-        UIView.animate(
-            withDuration: 0.9,
-            delay: 0.0,
-            options: .curveLinear,
-            animations: {
-                self.viewInfoSensor?.frame.origin.y = 10000
-
-        }) { (completed) in
-            self.viewInfoSensor?.isHidden = true
-        }
+        self.viewInfoSensor?.isHidden = true
     }
     
     private func configureUI(){
@@ -206,7 +197,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         tvInfoEmoji.text = self.emojiScale(index: sensor.quality.index)
         self.viewInfoSensor?.isHidden = false
         if(animationON){slideUpInfo()}else{
-            self.viewInfoSensor?.frame.origin.y = 405
+            self.viewInfoSensor?.isHidden = false
         }
     }
     
@@ -218,16 +209,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     
     @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
         if (sender.direction == .down) {
-            UIView.animate(
-                withDuration: 1,
-                delay: 0.0,
-                options: .curveLinear,
-                animations: {
-                    self.viewInfoSensor?.frame.origin.y = 10000
-
-            }) { (completed) in
-                self.viewInfoSensor?.isHidden = true
-            }
+            self.viewInfoSensor?.isHidden = true
         }
     }
 }
