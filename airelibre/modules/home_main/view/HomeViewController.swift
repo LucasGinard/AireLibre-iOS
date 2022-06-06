@@ -168,9 +168,9 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         let image = self.markerImage(index: index)!
         UIGraphicsBeginImageContext(image.size)
         image.draw(in: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(image.size.width+10), height: CGFloat(image.size.height+10)))
-        var ejeX = 22
+        var ejeX = 23
         switch(String(index).count){
-            case 2: ejeX = 19
+            case 2: ejeX = 20
             case 3: ejeX = 16
             default: break
         }
