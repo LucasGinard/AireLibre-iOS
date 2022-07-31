@@ -28,6 +28,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
+    private var zoomGet:Float = 10
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -68,7 +69,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
 
     private func createMap(){
-        let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: 10)
+        let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: zoomGet)
         mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
         mapView.isMyLocationEnabled = true
         mapView.delegate = self
@@ -136,6 +137,10 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         return true
     }
     
+    func mapView(_ mapView: GMSMapView, idleAt position: GMSCameraPosition) {
+        zoomGet = position.zoom
+    }
+    
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         guard let location = locations.first else {
             return
@@ -194,7 +199,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
     
     private func onClickInfoSensor(sensor:SensorResponse){
-        mapView.camera = GMSCameraPosition.camera(withLatitude: sensor.latitude, longitude: sensor.longitude, zoom: 10)
+        mapView.camera = GMSCameraPosition.camera(withLatitude: sensor.latitude, longitude: sensor.longitude, zoom: zoomGet)
         var animationON = true
         if(tvInfoTitle.text == sensor.description){animationON = false}
         tvInfoTitle.text = sensor.description
