@@ -24,7 +24,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     private var sensorList:[SensorResponse] = []
     private var sensor:SensorResponse!
     private var showSensorFavorite:Bool = true
-    private let theme = UserDefaults.standard.string(forKey: "isDarkMode")
+    private var theme = UserDefaults.standard.string(forKey: "isDarkMode")
     
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
@@ -78,6 +78,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
     
     private func mapTheme(){
+        theme = UserDefaults.standard.string(forKey: "isDarkMode")
         if(theme == nil){
             if self.traitCollection.userInterfaceStyle == .dark {
                 do {
