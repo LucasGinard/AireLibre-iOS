@@ -52,6 +52,16 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         self.viewInfoSensor?.isHidden = true
     }
     
+    @IBAction func clickInfoAQI(_ sender: Any) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+                let myAlert = storyboard.instantiateViewController(withIdentifier: "dialogAQI")
+                myAlert.modalPresentationStyle = UIModalPresentationStyle.overCurrentContext
+                myAlert.modalTransitionStyle = UIModalTransitionStyle.crossDissolve
+                self.present(myAlert, animated: true, completion: nil)
+        
+    }
+    
+    
     private func configureUI(){
         if(theme == nil){
             if(self.traitCollection.userInterfaceStyle == .dark){

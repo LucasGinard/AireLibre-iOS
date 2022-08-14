@@ -375,18 +375,33 @@
                                             <action selector="onClickWeb:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XMK-8x-COF"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6k-ya-KYR">
+                                        <rect key="frame" x="112" y="161.5" width="25" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="25" id="59U-1k-7ZS"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="questionmark.circle" catalog="system">
+                                            <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="clickInfoAQI:" destination="2FE-2r-N33" eventType="touchUpInside" id="s2I-uS-fBj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.13982146979999999" green="0.4661616683" blue="0.26757335659999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="uuW-qO-jKS" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="399-Pa-A9e"/>
                                     <constraint firstItem="aUA-Ic-9XZ" firstAttribute="top" secondItem="hhl-tb-faQ" secondAttribute="bottom" constant="8" id="5g0-od-yyY"/>
                                     <constraint firstItem="5Ui-XL-3rp" firstAttribute="top" secondItem="V1E-Um-xCd" secondAttribute="bottom" constant="8" id="G7l-oZ-ZqY"/>
+                                    <constraint firstItem="b6k-ya-KYR" firstAttribute="top" secondItem="hhl-tb-faQ" secondAttribute="bottom" constant="2" id="Hh9-77-dnw"/>
                                     <constraint firstAttribute="width" secondItem="BT1-Ud-Wnn" secondAttribute="height" multiplier="180:113" id="Ipe-gI-c7D"/>
                                     <constraint firstAttribute="trailing" secondItem="3lC-h6-olu" secondAttribute="trailing" constant="20" id="Jtb-Q9-hur"/>
                                     <constraint firstItem="QU7-y0-i5d" firstAttribute="top" secondItem="BT1-Ud-Wnn" secondAttribute="top" constant="15" id="KPY-md-zfn"/>
                                     <constraint firstAttribute="trailing" secondItem="hhl-tb-faQ" secondAttribute="trailing" constant="15" id="LdG-fU-la9"/>
                                     <constraint firstItem="QU7-y0-i5d" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="Qc2-zj-YSb"/>
                                     <constraint firstItem="5Ui-XL-3rp" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="Qsk-1e-7gx"/>
+                                    <constraint firstItem="b6k-ya-KYR" firstAttribute="leading" secondItem="aUA-Ic-9XZ" secondAttribute="trailing" constant="3.5" id="Rk5-54-VKw"/>
                                     <constraint firstItem="hhl-tb-faQ" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="aJs-7P-D6K"/>
                                     <constraint firstItem="V1E-Um-xCd" firstAttribute="top" secondItem="QU7-y0-i5d" secondAttribute="bottom" constant="4" id="c7m-up-DGg"/>
                                     <constraint firstItem="aUA-Ic-9XZ" firstAttribute="leading" secondItem="BT1-Ud-Wnn" secondAttribute="leading" constant="15" id="dQx-BF-kJV"/>
@@ -444,16 +459,104 @@
             </objects>
             <point key="canvasLocation" x="766.66666666666674" y="736.60714285714278"/>
         </scene>
+        <!--Dialog InfoAQI View Controller-->
+        <scene sceneID="ChE-VZ-uPA">
+            <objects>
+                <viewController storyboardIdentifier="dialogAQI" id="JGY-8I-5yt" customClass="DialogInfoAQIViewController" customModule="airelibre" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sdU-Qe-Qfe">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N49-iD-kGd" userLabel="dialogCustom">
+                                <rect key="frame" x="30" y="332" width="354" height="233"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8k-iY-kZb">
+                                        <rect key="frame" x="315" y="8" width="24" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="6yP-m7-eX3"/>
+                                            <constraint firstAttribute="height" constant="25" id="TXc-F9-c2G"/>
+                                            <constraint firstAttribute="width" constant="24" id="zNJ-Mb-3JZ"/>
+                                        </constraints>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="icon_close_black"/>
+                                        <connections>
+                                            <action selector="clickCloseDialog:" destination="JGY-8I-5yt" eventType="touchUpInside" id="sFX-Ql-Kfo"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Qué es AQI?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nPw-Cd-Z2N">
+                                        <rect key="frame" x="5" y="36" width="345" height="19.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="18"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="6Xa-hV-5vt">
+                                        <rect key="frame" x="15" y="63.5" width="324" height="76"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="🌎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JmO-ab-9OA">
+                                                <rect key="frame" x="0.0" y="3" width="42" height="70"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="42" id="C2n-FY-wNo"/>
+                                                    <constraint firstAttribute="height" constant="70" id="uQy-Np-MpX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8p-kK-l1p">
+                                                <rect key="frame" x="52" y="0.0" width="272" height="76"/>
+                                                <string key="text">Es un índice utilizado por agencias ambientales para medir la calidad del aire,cuanto más alto su valor, el nivel de contaminación es mayor.</string>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="16"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="6Xa-hV-5vt" secondAttribute="bottom" constant="93.5" id="1Bn-EQ-jyP"/>
+                                    <constraint firstItem="6Xa-hV-5vt" firstAttribute="leading" secondItem="N49-iD-kGd" secondAttribute="leading" constant="15" id="1SW-89-Cth"/>
+                                    <constraint firstAttribute="trailing" secondItem="6Xa-hV-5vt" secondAttribute="trailing" constant="15" id="Itq-Iy-T3O"/>
+                                    <constraint firstAttribute="trailing" secondItem="g8k-iY-kZb" secondAttribute="trailing" constant="15" id="gJ3-or-gOt"/>
+                                    <constraint firstItem="6Xa-hV-5vt" firstAttribute="top" secondItem="nPw-Cd-Z2N" secondAttribute="bottom" constant="8" id="j39-7m-bYy"/>
+                                    <constraint firstItem="nPw-Cd-Z2N" firstAttribute="top" secondItem="g8k-iY-kZb" secondAttribute="bottom" constant="3" id="sqB-oh-Q5M"/>
+                                    <constraint firstAttribute="height" constant="233" id="wTg-S5-fwC"/>
+                                    <constraint firstItem="g8k-iY-kZb" firstAttribute="top" secondItem="N49-iD-kGd" secondAttribute="top" constant="8" id="y7r-aK-qDY"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NZ5-Sp-0h7"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.44647459320674671" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="N49-iD-kGd" firstAttribute="top" secondItem="NZ5-Sp-0h7" secondAttribute="top" constant="288" id="3s0-ak-Sxv"/>
+                            <constraint firstItem="N49-iD-kGd" firstAttribute="leading" secondItem="NZ5-Sp-0h7" secondAttribute="leading" constant="30" id="BcS-GJ-Tmb"/>
+                            <constraint firstItem="NZ5-Sp-0h7" firstAttribute="trailing" secondItem="N49-iD-kGd" secondAttribute="trailing" constant="30" id="Px6-wO-BjR"/>
+                            <constraint firstItem="NZ5-Sp-0h7" firstAttribute="bottom" secondItem="N49-iD-kGd" secondAttribute="bottom" constant="297" id="dba-fe-cqm"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnCloseDialog" destination="g8k-iY-kZb" id="Vgn-a5-2PA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iSy-RH-aHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="767" y="1412"/>
+        </scene>
     </scenes>
+    <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
     <resources>
         <image name="MarkerRed" width="40" height="40"/>
         <image name="iconAbout" width="35" height="35"/>
-        <image name="iconClose" width="512" height="512"/>
+        <image name="iconClose" width="256" height="256"/>
         <image name="iconConfig" width="35" height="35"/>
         <image name="iconSensor" width="35" height="35"/>
         <image name="iconTwitter" width="320" height="320"/>
         <image name="iconWeb" width="320" height="320"/>
+        <image name="icon_close_black" width="256" height="256"/>
         <image name="moon.fill" catalog="system" width="128" height="121"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
