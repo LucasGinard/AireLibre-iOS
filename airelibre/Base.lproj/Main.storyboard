@@ -473,7 +473,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N49-iD-kGd" userLabel="dialogCustom">
-                                <rect key="frame" x="30" y="332" width="354" height="233"/>
+                                <rect key="frame" x="30" y="194" width="354" height="468"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8k-iY-kZb">
                                         <rect key="frame" x="315" y="8" width="24" height="25"/>
@@ -517,16 +517,22 @@
                                             </label>
                                         </subviews>
                                     </stackView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-bj-bKm">
+                                        <rect key="frame" x="15" y="149.5" width="324" height="308.5"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    </tableView>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="6Xa-hV-5vt" secondAttribute="bottom" constant="93.5" id="1Bn-EQ-jyP"/>
                                     <constraint firstItem="6Xa-hV-5vt" firstAttribute="leading" secondItem="N49-iD-kGd" secondAttribute="leading" constant="15" id="1SW-89-Cth"/>
+                                    <constraint firstItem="Pc7-bj-bKm" firstAttribute="leading" secondItem="N49-iD-kGd" secondAttribute="leading" constant="15" id="3iX-vZ-Koo"/>
+                                    <constraint firstAttribute="trailing" secondItem="Pc7-bj-bKm" secondAttribute="trailing" constant="15" id="DNH-4J-9Ls"/>
                                     <constraint firstAttribute="trailing" secondItem="6Xa-hV-5vt" secondAttribute="trailing" constant="15" id="Itq-Iy-T3O"/>
+                                    <constraint firstItem="Pc7-bj-bKm" firstAttribute="top" secondItem="6Xa-hV-5vt" secondAttribute="bottom" constant="10" id="dqr-cr-9BD"/>
                                     <constraint firstAttribute="trailing" secondItem="g8k-iY-kZb" secondAttribute="trailing" constant="15" id="gJ3-or-gOt"/>
                                     <constraint firstItem="6Xa-hV-5vt" firstAttribute="top" secondItem="nPw-Cd-Z2N" secondAttribute="bottom" constant="8" id="j39-7m-bYy"/>
                                     <constraint firstItem="nPw-Cd-Z2N" firstAttribute="top" secondItem="g8k-iY-kZb" secondAttribute="bottom" constant="3" id="sqB-oh-Q5M"/>
-                                    <constraint firstAttribute="height" constant="233" id="wTg-S5-fwC"/>
+                                    <constraint firstAttribute="bottom" secondItem="Pc7-bj-bKm" secondAttribute="bottom" constant="10" id="wQs-gZ-vjU"/>
                                     <constraint firstItem="g8k-iY-kZb" firstAttribute="top" secondItem="N49-iD-kGd" secondAttribute="top" constant="8" id="y7r-aK-qDY"/>
                                 </constraints>
                             </view>
@@ -535,15 +541,16 @@
                         <color key="backgroundColor" white="0.0" alpha="0.44647459320674671" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="N49-iD-kGd" firstAttribute="top" secondItem="NZ5-Sp-0h7" secondAttribute="top" constant="288" id="3s0-ak-Sxv"/>
+                            <constraint firstItem="N49-iD-kGd" firstAttribute="top" secondItem="NZ5-Sp-0h7" secondAttribute="top" constant="150" id="3s0-ak-Sxv"/>
                             <constraint firstItem="N49-iD-kGd" firstAttribute="leading" secondItem="NZ5-Sp-0h7" secondAttribute="leading" constant="30" id="BcS-GJ-Tmb"/>
                             <constraint firstItem="NZ5-Sp-0h7" firstAttribute="trailing" secondItem="N49-iD-kGd" secondAttribute="trailing" constant="30" id="Px6-wO-BjR"/>
-                            <constraint firstItem="NZ5-Sp-0h7" firstAttribute="bottom" secondItem="N49-iD-kGd" secondAttribute="bottom" constant="297" id="dba-fe-cqm"/>
+                            <constraint firstItem="NZ5-Sp-0h7" firstAttribute="bottom" secondItem="N49-iD-kGd" secondAttribute="bottom" constant="200" id="dba-fe-cqm"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="btnCloseDialog" destination="g8k-iY-kZb" id="Vgn-a5-2PA"/>
                         <outlet property="containerView" destination="ozK-6q-nxJ" id="dr5-GA-a3u"/>
+                        <outlet property="tableViewInfo" destination="Pc7-bj-bKm" id="XoK-dQ-jNe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSy-RH-aHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="rubik_bold.ttf">
+            <string>Rubik-Bold</string>
+        </array>
+        <array key="rubik_regular.ttf">
+            <string>Rubik-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="146" id="KGk-i7-Jjw" customClass="InfoAQITableViewCell" customModule="airelibre" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="438" height="146"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="438" height="146"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTT-PC-GLE">
+                        <rect key="frame" x="0.0" y="0.0" width="438" height="146"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXW-o4-eOf">
+                                <rect key="frame" x="10" y="60" width="418" height="81"/>
+                                <string key="text">Calidad de aire aceptable, riesgo moderado para la salud de personas sensibles a la contaminación ambiental.
+</string>
+                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcy-ZA-UWU">
+                                <rect key="frame" x="10" y="20" width="138" height="29"/>
+                                <string key="text">0-50 | Libre
+</string>
+                                <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="438" id="3y6-0I-pZF"/>
+                            <constraint firstItem="AXW-o4-eOf" firstAttribute="leading" secondItem="KTT-PC-GLE" secondAttribute="leading" constant="10" id="Mr6-Vx-YRr"/>
+                            <constraint firstItem="wcy-ZA-UWU" firstAttribute="leading" secondItem="KTT-PC-GLE" secondAttribute="leading" constant="10" id="NnG-dP-r7y"/>
+                            <constraint firstAttribute="trailing" secondItem="AXW-o4-eOf" secondAttribute="trailing" constant="10" id="Vlq-J8-Zch"/>
+                            <constraint firstAttribute="bottom" secondItem="AXW-o4-eOf" secondAttribute="bottom" constant="5" id="ZNb-bh-taS"/>
+                            <constraint firstItem="wcy-ZA-UWU" firstAttribute="top" secondItem="KTT-PC-GLE" secondAttribute="top" constant="20" id="iyZ-S6-Pux"/>
+                            <constraint firstItem="AXW-o4-eOf" firstAttribute="top" secondItem="wcy-ZA-UWU" secondAttribute="bottom" constant="11" id="lue-OG-REw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="KTT-PC-GLE" secondAttribute="bottom" id="3si-2A-UNM"/>
+                    <constraint firstItem="KTT-PC-GLE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Duc-Z0-m7J"/>
+                    <constraint firstItem="KTT-PC-GLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Kqn-sp-7JB"/>
+                    <constraint firstAttribute="trailing" secondItem="KTT-PC-GLE" secondAttribute="trailing" id="TNi-aM-FAc"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelDescriptionInfo" destination="AXW-o4-eOf" id="atv-Tb-fCS"/>
+                <outlet property="labelTitle" destination="wcy-ZA-UWU" id="KXU-yg-oWb"/>
+                <outlet property="viewBackground" destination="KTT-PC-GLE" id="8Xz-wN-sPj"/>
+            </connections>
+            <point key="canvasLocation" x="223.18840579710147" y="83.035714285714278"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
