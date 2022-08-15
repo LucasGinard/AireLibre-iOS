@@ -9,6 +9,7 @@ import UIKit
 
 class DialogInfoAQIViewController: UIViewController {
 
+    @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var btnCloseDialog: UIButton!
     
     override func viewDidLoad() {
@@ -19,10 +20,6 @@ class DialogInfoAQIViewController: UIViewController {
         themeApp()
         configureUI()
     }
-
-    @IBAction func clickCloseDialog(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
-    }
     
     func configureUI(){
         if(isDarkTheme()){
@@ -32,6 +29,17 @@ class DialogInfoAQIViewController: UIViewController {
             btnCloseDialog.setImage(UIImage(named: "icon_close_black"),for: .normal)
         }
         
+        let onClickIconApp = UITapGestureRecognizer(target: self, action: #selector(self.onClickIconApp(_:)))
+        self.containerView.addGestureRecognizer(onClickIconApp)
+        
+    }
+
+    @IBAction func clickCloseDialog(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc func onClickIconApp(_ sender: UITapGestureRecognizer) {
+        self.dismiss(animated: true, completion: nil)
     }
     
 }

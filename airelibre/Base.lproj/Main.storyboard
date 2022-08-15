@@ -467,6 +467,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ozK-6q-nxJ" userLabel="containerView">
+                                <rect key="frame" x="20" y="67" width="374" height="795"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N49-iD-kGd" userLabel="dialogCustom">
                                 <rect key="frame" x="30" y="332" width="354" height="233"/>
                                 <subviews>
@@ -538,11 +543,12 @@
                     </view>
                     <connections>
                         <outlet property="btnCloseDialog" destination="g8k-iY-kZb" id="Vgn-a5-2PA"/>
+                        <outlet property="containerView" destination="ozK-6q-nxJ" id="dr5-GA-a3u"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iSy-RH-aHp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="767" y="1412"/>
+            <point key="canvasLocation" x="766.66666666666674" y="1411.6071428571429"/>
         </scene>
     </scenes>
     <color key="tintColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
