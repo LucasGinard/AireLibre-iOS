@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMaps
+import MaterialComponents.MaterialButtons
 
 class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDelegate {
 
@@ -29,6 +30,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
     private var zoomGet:Float = 10
+    private let btnCallService = MDCFloatingButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,8 +78,27 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
                 tvTitle.textColor = .black
             }
         }
+        setFloatingButton()
     }
 
+    func setFloatingButton() {
+        let image = UIImage(systemName: "wifi.exclamationmark")
+        btnCallService.sizeToFit()
+        btnCallService.translatesAutoresizingMaskIntoConstraints = false
+        btnCallService.setImage(image, for: .normal)
+        btnCallService.setImageTintColor(.white, for: .normal)
+        btnCallService.backgroundColor = UIColor.init("047745")
+        btnCallService.addTarget(self, action: #selector(tap), for: .touchUpInside)
+            view.addSubview(btnCallService)
+            view.addConstraint(NSLayoutConstraint(item: btnCallService, attribute: .bottom, relatedBy: .equal, toItem: view, attribute: .bottom, multiplier: 1.0, constant: -94))
+            view.addConstraint(NSLayoutConstraint(item: btnCallService, attribute: .trailing, relatedBy: .equal, toItem: view, attribute: .trailing, multiplier: 1.0, constant: -32))
+        self.btnCallService.isHidden = true
+    }
+    
+    @objc func tap(_ sender: Any) {
+        callService()
+    }
+    
     private func createMap(){
         let camera = GMSCameraPosition.camera(withLatitude: -25.250, longitude: -57.536, zoom: zoomGet)
         mapView = GMSMapView.map(withFrame: self.viewMap.frame, camera: camera)
@@ -120,7 +141,12 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     private func callService(){
         self.homeViewModel = HomeViewModel()
         self.homeViewModel.bindHomeViewModelToController = {
-            self.createMarker(list: self.homeViewModel.sensor)
+            if(self.homeViewModel.sensor.count <= 0){
+                self.btnCallService.isHidden = false
+            }else{
+                self.createMarker(list: self.homeViewModel.sensor)
+                self.btnCallService.isHidden = true
+            }
         }
     }
     
