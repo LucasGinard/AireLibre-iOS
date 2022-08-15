@@ -26,14 +26,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KTT-PC-GLE">
-                        <rect key="frame" x="0.0" y="0.0" width="438" height="146"/>
+                        <rect key="frame" x="0.0" y="5" width="438" height="141"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AXW-o4-eOf">
-                                <rect key="frame" x="10" y="60" width="418" height="81"/>
+                                <rect key="frame" x="10" y="55" width="418" height="81"/>
                                 <string key="text">Calidad de aire aceptable, riesgo moderado para la salud de personas sensibles a la contaminación ambiental.
 </string>
                                 <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wcy-ZA-UWU">
@@ -41,7 +41,7 @@
                                 <string key="text">0-50 | Libre
 </string>
                                 <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="24"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -49,18 +49,18 @@
                         <constraints>
                             <constraint firstAttribute="width" constant="438" id="3y6-0I-pZF"/>
                             <constraint firstItem="AXW-o4-eOf" firstAttribute="leading" secondItem="KTT-PC-GLE" secondAttribute="leading" constant="10" id="Mr6-Vx-YRr"/>
-                            <constraint firstItem="wcy-ZA-UWU" firstAttribute="leading" secondItem="KTT-PC-GLE" secondAttribute="leading" constant="10" id="NnG-dP-r7y"/>
                             <constraint firstAttribute="trailing" secondItem="AXW-o4-eOf" secondAttribute="trailing" constant="10" id="Vlq-J8-Zch"/>
                             <constraint firstAttribute="bottom" secondItem="AXW-o4-eOf" secondAttribute="bottom" constant="5" id="ZNb-bh-taS"/>
-                            <constraint firstItem="wcy-ZA-UWU" firstAttribute="top" secondItem="KTT-PC-GLE" secondAttribute="top" constant="20" id="iyZ-S6-Pux"/>
-                            <constraint firstItem="AXW-o4-eOf" firstAttribute="top" secondItem="wcy-ZA-UWU" secondAttribute="bottom" constant="11" id="lue-OG-REw"/>
+                            <constraint firstItem="wcy-ZA-UWU" firstAttribute="top" secondItem="KTT-PC-GLE" secondAttribute="top" constant="20" symbolic="YES" id="eoU-2k-p1C"/>
+                            <constraint firstItem="AXW-o4-eOf" firstAttribute="top" secondItem="wcy-ZA-UWU" secondAttribute="bottom" constant="6" id="khy-qB-3bo"/>
+                            <constraint firstItem="wcy-ZA-UWU" firstAttribute="leading" secondItem="KTT-PC-GLE" secondAttribute="leading" constant="10" id="zbR-Zk-TDq"/>
                         </constraints>
                     </view>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="KTT-PC-GLE" secondAttribute="bottom" id="3si-2A-UNM"/>
                     <constraint firstItem="KTT-PC-GLE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Duc-Z0-m7J"/>
-                    <constraint firstItem="KTT-PC-GLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Kqn-sp-7JB"/>
+                    <constraint firstItem="KTT-PC-GLE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Kqn-sp-7JB"/>
                     <constraint firstAttribute="trailing" secondItem="KTT-PC-GLE" secondAttribute="trailing" id="TNi-aM-FAc"/>
                 </constraints>
             </tableViewCellContentView>

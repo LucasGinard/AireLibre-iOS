@@ -22,6 +22,8 @@ class DialogInfoAQIViewController: UIViewController {
         "Condición de emergencia.",
         "Alerta sanitaria, efectos graves para toda la población."
     ]
+    private var backgroundList = ["A2DC61","F6D550","EE9955","E9686C","A97BBC","9B5974"]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -67,7 +69,10 @@ extension DialogInfoAQIViewController:UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "InfoAQITableViewCell")
-        (cell as? InfoAQITableViewCell)?.configureCell(title: "\(titlesList[indexPath.row])", description: "\(descriptionList[indexPath.row])")
+        (cell as? InfoAQITableViewCell)?.configureCell(
+            title: "\(titlesList[indexPath.row])",
+            description: "\(descriptionList[indexPath.row])",
+            backgroundColor: backgroundList[indexPath.row])
         return cell!
     }
     

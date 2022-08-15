@@ -24,10 +24,10 @@ class InfoAQITableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configureCell(title:String,description:String){
+    func configureCell(title:String,description:String,backgroundColor:String){
         labelTitle.text = title
         labelDescriptionInfo.text = description
-        backgroundView?.backgroundColor
+        viewBackground?.backgroundColor = UIColor.init(backgroundColor)
     }
     
 }
