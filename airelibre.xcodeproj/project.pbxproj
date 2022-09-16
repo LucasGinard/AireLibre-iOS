@@ -7,21 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		51D40AAAF28037942E3E77DA /* Pods_airelibre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9992FDE15AD38C91E09384C /* Pods_airelibre.framework */; };
+		527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */; };
+		527FC40B28D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */; };
+		527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */; };
+		527FC40D28D3E9BE001A5FF6 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40828D3E9BE001A5FF6 /* extensions.swift */; };
+		527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */; };
+		527FC41228D3E9F2001A5FF6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */; };
+		527FC41628D3ED22001A5FF6 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41528D3ED22001A5FF6 /* fonts */; };
+		527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */; };
+		527FC41C28D3EE3D001A5FF6 /* config in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41B28D3EE3C001A5FF6 /* config */; };
 		52A97828280632E4006A877D /* SensorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A97827280632E4006A877D /* SensorResponse.swift */; };
 		52A9782B2806390B006A877D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782A2806390B006A877D /* APIService.swift */; };
 		52A9782E28063A2E006A877D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782D28063A2E006A877D /* HomeViewModel.swift */; };
 		52A9783128063B00006A877D /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9783028063B00006A877D /* HomeViewController.swift */; };
 		52C636E228028C99005CDBD4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636E128028C99005CDBD4 /* AppDelegate.swift */; };
 		52C636E428028C99005CDBD4 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636E328028C99005CDBD4 /* SceneDelegate.swift */; };
-		52C636E628028C99005CDBD4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636E528028C99005CDBD4 /* ViewController.swift */; };
 		52C636E928028C99005CDBD4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C636E728028C99005CDBD4 /* Main.storyboard */; };
 		52C636EB28028C9C005CDBD4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52C636EA28028C9C005CDBD4 /* Assets.xcassets */; };
 		52C636EE28028C9C005CDBD4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 52C636EC28028C9C005CDBD4 /* LaunchScreen.storyboard */; };
-		52C636F72802943E005CDBD4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636F62802943E005CDBD4 /* AboutViewController.swift */; };
 		52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636F928029A3D005CDBD4 /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airelibre.release.xcconfig"; path = "Target Support Files/Pods-airelibre/Pods-airelibre.release.xcconfig"; sourceTree = "<group>"; };
+		527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
+		527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInfoAQIViewController.swift; sourceTree = "<group>"; };
+		527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoAQITableViewCell.swift; sourceTree = "<group>"; };
+		527FC40828D3E9BE001A5FF6 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
+		527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoAQITableViewCell.xib; sourceTree = "<group>"; };
+		527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		527FC41528D3ED22001A5FF6 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
+		527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		527FC41B28D3EE3C001A5FF6 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
 		52A97827280632E4006A877D /* SensorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorResponse.swift; sourceTree = "<group>"; };
 		52A9782A2806390B006A877D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		52A9782D28063A2E006A877D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -29,13 +47,13 @@
 		52C636DE28028C99005CDBD4 /* airelibre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = airelibre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52C636E128028C99005CDBD4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52C636E328028C99005CDBD4 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		52C636E528028C99005CDBD4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52C636E828028C99005CDBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		52C636EA28028C9C005CDBD4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52C636ED28028C9C005CDBD4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52C636EF28028C9C005CDBD4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		52C636F62802943E005CDBD4 /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		52C636F928029A3D005CDBD4 /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		5BDC09953C2F8758E34142D5 /* Pods-airelibre.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airelibre.debug.xcconfig"; path = "Target Support Files/Pods-airelibre/Pods-airelibre.debug.xcconfig"; sourceTree = "<group>"; };
+		D9992FDE15AD38C91E09384C /* Pods_airelibre.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_airelibre.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,12 +61,41 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				51D40AAAF28037942E3E77DA /* Pods_airelibre.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		05CE592AD97052A0B15FC0BD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D9992FDE15AD38C91E09384C /* Pods_airelibre.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		527FC40428D3E9A7001A5FF6 /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */,
+				527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */,
+				527FC40828D3E9BE001A5FF6 /* extensions.swift */,
+				527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */,
+				527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		527FC41028D3E9E6001A5FF6 /* about */ = {
+			isa = PBXGroup;
+			children = (
+				527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */,
+			);
+			path = about;
+			sourceTree = "<group>";
+		};
 		52A97829280638F3006A877D /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +125,8 @@
 			children = (
 				52C636E028028C99005CDBD4 /* airelibre */,
 				52C636DF28028C99005CDBD4 /* Products */,
+				87811A2523F5C9F699E65F2C /* Pods */,
+				05CE592AD97052A0B15FC0BD /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -92,13 +141,14 @@
 		52C636E028028C99005CDBD4 /* airelibre */ = {
 			isa = PBXGroup;
 			children = (
+				527FC41528D3ED22001A5FF6 /* fonts */,
 				52C636F5280293F0005CDBD4 /* modules */,
 				52C636E128028C99005CDBD4 /* AppDelegate.swift */,
 				52C636E328028C99005CDBD4 /* SceneDelegate.swift */,
-				52C636E528028C99005CDBD4 /* ViewController.swift */,
 				52C636E728028C99005CDBD4 /* Main.storyboard */,
 				52C636EA28028C9C005CDBD4 /* Assets.xcassets */,
 				52C636EC28028C9C005CDBD4 /* LaunchScreen.storyboard */,
+				527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */,
 				52C636EF28028C9C005CDBD4 /* Info.plist */,
 			);
 			path = airelibre;
@@ -107,10 +157,12 @@
 		52C636F5280293F0005CDBD4 /* modules */ = {
 			isa = PBXGroup;
 			children = (
+				527FC41B28D3EE3C001A5FF6 /* config */,
+				527FC41028D3E9E6001A5FF6 /* about */,
+				527FC40428D3E9A7001A5FF6 /* utils */,
 				52A97829280638F3006A877D /* data */,
 				52C636FB28029B59005CDBD4 /* home_main */,
 				52C636F8280299FA005CDBD4 /* navigation */,
-				52C636F62802943E005CDBD4 /* AboutViewController.swift */,
 			);
 			path = modules;
 			sourceTree = "<group>";
@@ -141,6 +193,15 @@
 			path = model;
 			sourceTree = "<group>";
 		};
+		87811A2523F5C9F699E65F2C /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5BDC09953C2F8758E34142D5 /* Pods-airelibre.debug.xcconfig */,
+				4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -148,9 +209,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52C636F228028C9C005CDBD4 /* Build configuration list for PBXNativeTarget "airelibre" */;
 			buildPhases = (
+				60D888D7D6307AA2170C1D22 /* [CP] Check Pods Manifest.lock */,
 				52C636DA28028C99005CDBD4 /* Sources */,
 				52C636DB28028C99005CDBD4 /* Frameworks */,
 				52C636DC28028C99005CDBD4 /* Resources */,
+				164E38CAD2A674B6B5486C40 /* [CP] Embed Pods Frameworks */,
+				32CE4E81EBAA4E6B19E22502 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -200,27 +264,93 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C636EE28028C9C005CDBD4 /* LaunchScreen.storyboard in Resources */,
+				527FC41C28D3EE3D001A5FF6 /* config in Resources */,
 				52C636EB28028C9C005CDBD4 /* Assets.xcassets in Resources */,
+				527FC41628D3ED22001A5FF6 /* fonts in Resources */,
 				52C636E928028C99005CDBD4 /* Main.storyboard in Resources */,
+				527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */,
+				527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		164E38CAD2A674B6B5486C40 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-airelibre/Pods-airelibre-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-airelibre/Pods-airelibre-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-airelibre/Pods-airelibre-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		32CE4E81EBAA4E6B19E22502 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-airelibre/Pods-airelibre-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-airelibre/Pods-airelibre-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-airelibre/Pods-airelibre-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		60D888D7D6307AA2170C1D22 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-airelibre-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52C636DA28028C99005CDBD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				52C636E628028C99005CDBD4 /* ViewController.swift in Sources */,
 				52A9782B2806390B006A877D /* APIService.swift in Sources */,
+				527FC40B28D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift in Sources */,
+				527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */,
 				52C636E228028C99005CDBD4 /* AppDelegate.swift in Sources */,
 				52A9782E28063A2E006A877D /* HomeViewModel.swift in Sources */,
 				52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */,
+				527FC40D28D3E9BE001A5FF6 /* extensions.swift in Sources */,
 				52A9783128063B00006A877D /* HomeViewController.swift in Sources */,
 				52C636E428028C99005CDBD4 /* SceneDelegate.swift in Sources */,
+				527FC41228D3E9F2001A5FF6 /* AboutViewController.swift in Sources */,
 				52A97828280632E4006A877D /* SensorResponse.swift in Sources */,
-				52C636F72802943E005CDBD4 /* AboutViewController.swift in Sources */,
+				527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,6 +494,7 @@
 		};
 		52C636F328028C9C005CDBD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BDC09953C2F8758E34142D5 /* Pods-airelibre.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -393,6 +524,7 @@
 		};
 		52C636F428028C9C005CDBD4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
