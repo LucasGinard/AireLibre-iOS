@@ -11,6 +11,7 @@ import MaterialComponents.MaterialButtons
 
 class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewDelegate {
 
+    @IBOutlet weak var btnInfoAQI: UIButton!
     @IBOutlet weak var tvTitle: UILabel!
     @IBOutlet weak var viewMap: UIView!
     
@@ -246,6 +247,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         if(animationON){slideUpInfo()}else{
             self.viewInfoSensor?.isHidden = false
         }
+        self.btnInfoAQI.titleLabel?.text = ""
     }
     
     private func gestureDownInfoMarker(){
