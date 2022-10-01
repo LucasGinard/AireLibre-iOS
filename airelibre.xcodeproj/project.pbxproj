@@ -8,15 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		51D40AAAF28037942E3E77DA /* Pods_airelibre.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9992FDE15AD38C91E09384C /* Pods_airelibre.framework */; };
+		52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669A4A28E7CC40009DA821 /* ConfigViewController.swift */; };
 		527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */; };
 		527FC40B28D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */; };
 		527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */; };
 		527FC40D28D3E9BE001A5FF6 /* extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40828D3E9BE001A5FF6 /* extensions.swift */; };
 		527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */; };
 		527FC41228D3E9F2001A5FF6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */; };
-		527FC41628D3ED22001A5FF6 /* fonts in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41528D3ED22001A5FF6 /* fonts */; };
 		527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */; };
-		527FC41C28D3EE3D001A5FF6 /* config in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41B28D3EE3C001A5FF6 /* config */; };
 		52A97828280632E4006A877D /* SensorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A97827280632E4006A877D /* SensorResponse.swift */; };
 		52A9782B2806390B006A877D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782A2806390B006A877D /* APIService.swift */; };
 		52A9782E28063A2E006A877D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782D28063A2E006A877D /* HomeViewModel.swift */; };
@@ -31,15 +30,18 @@
 
 /* Begin PBXFileReference section */
 		4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airelibre.release.xcconfig"; path = "Target Support Files/Pods-airelibre/Pods-airelibre.release.xcconfig"; sourceTree = "<group>"; };
+		52669A4A28E7CC40009DA821 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigViewController.swift; path = config/ConfigViewController.swift; sourceTree = "<group>"; };
+		52669A4E28E7CD4E009DA821 /* disket_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_regular.ttf; sourceTree = "<group>"; };
+		52669A4F28E7CD4E009DA821 /* rubik_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_bold.ttf; sourceTree = "<group>"; };
+		52669A5028E7CD4E009DA821 /* rubik_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_regular.ttf; sourceTree = "<group>"; };
+		52669A5128E7CD4E009DA821 /* disket_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_bold.ttf; sourceTree = "<group>"; };
 		527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInfoAQIViewController.swift; sourceTree = "<group>"; };
 		527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoAQITableViewCell.swift; sourceTree = "<group>"; };
 		527FC40828D3E9BE001A5FF6 /* extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = extensions.swift; sourceTree = "<group>"; };
 		527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoAQITableViewCell.xib; sourceTree = "<group>"; };
 		527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
-		527FC41528D3ED22001A5FF6 /* fonts */ = {isa = PBXFileReference; lastKnownFileType = folder; path = fonts; sourceTree = "<group>"; };
 		527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		527FC41B28D3EE3C001A5FF6 /* config */ = {isa = PBXFileReference; lastKnownFileType = folder; path = config; sourceTree = "<group>"; };
 		52A97827280632E4006A877D /* SensorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorResponse.swift; sourceTree = "<group>"; };
 		52A9782A2806390B006A877D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		52A9782D28063A2E006A877D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -74,6 +76,24 @@
 				D9992FDE15AD38C91E09384C /* Pods_airelibre.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		52669A4928E7CC06009DA821 /* config */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = config;
+			sourceTree = "<group>";
+		};
+		52669A4D28E7CD1F009DA821 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				52669A5128E7CD4E009DA821 /* disket_bold.ttf */,
+				52669A4E28E7CD4E009DA821 /* disket_regular.ttf */,
+				52669A4F28E7CD4E009DA821 /* rubik_bold.ttf */,
+				52669A5028E7CD4E009DA821 /* rubik_regular.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		527FC40428D3E9A7001A5FF6 /* utils */ = {
@@ -141,7 +161,7 @@
 		52C636E028028C99005CDBD4 /* airelibre */ = {
 			isa = PBXGroup;
 			children = (
-				527FC41528D3ED22001A5FF6 /* fonts */,
+				52669A4D28E7CD1F009DA821 /* fonts */,
 				52C636F5280293F0005CDBD4 /* modules */,
 				52C636E128028C99005CDBD4 /* AppDelegate.swift */,
 				52C636E328028C99005CDBD4 /* SceneDelegate.swift */,
@@ -157,7 +177,8 @@
 		52C636F5280293F0005CDBD4 /* modules */ = {
 			isa = PBXGroup;
 			children = (
-				527FC41B28D3EE3C001A5FF6 /* config */,
+				52669A4928E7CC06009DA821 /* config */,
+				52669A4A28E7CC40009DA821 /* ConfigViewController.swift */,
 				527FC41028D3E9E6001A5FF6 /* about */,
 				527FC40428D3E9A7001A5FF6 /* utils */,
 				52A97829280638F3006A877D /* data */,
@@ -264,9 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52C636EE28028C9C005CDBD4 /* LaunchScreen.storyboard in Resources */,
-				527FC41C28D3EE3D001A5FF6 /* config in Resources */,
 				52C636EB28028C9C005CDBD4 /* Assets.xcassets in Resources */,
-				527FC41628D3ED22001A5FF6 /* fonts in Resources */,
 				52C636E928028C99005CDBD4 /* Main.storyboard in Resources */,
 				527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */,
 				527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */,
@@ -344,6 +363,7 @@
 				527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */,
 				52C636E228028C99005CDBD4 /* AppDelegate.swift in Sources */,
 				52A9782E28063A2E006A877D /* HomeViewModel.swift in Sources */,
+				52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */,
 				52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */,
 				527FC40D28D3E9BE001A5FF6 /* extensions.swift in Sources */,
 				52A9783128063B00006A877D /* HomeViewController.swift in Sources */,
