@@ -42,6 +42,9 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         callService()
         configureUI()
         gestureDownInfoMarker()
+        mapView.isMyLocationEnabled = true
+        mapView.settings.myLocationButton = true
+        mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 625, right: 25)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -243,6 +246,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         tvInfoTitle.text = sensor.description
         tvInfoScale.text = "\(sensor.quality.index)"
         tvInfoEmoji.text = self.emojiScale(index: sensor.quality.index)
+        tvInfoDescription.text = getCorrectDescription(sensor: sensor)
         self.viewInfoSensor?.isHidden = false
         if(animationON){slideUpInfo()}else{
             self.viewInfoSensor?.isHidden = false
@@ -259,6 +263,33 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     @objc func handleSwipes(_ sender:UISwipeGestureRecognizer) {
         if (sender.direction == .down) {
             self.viewInfoSensor?.isHidden = true
+        }
+    }
+    
+    func getCorrectDescription(sensor: SensorResponse) -> String {
+        let descriptionList = [
+            "Escaso riesgo de contaminación atmosférica, calidad de aire satisfactoria.",
+            "Calidad de aire aceptable, riesgo moderado para la salud de personas sensibles a la contaminación ambiental.",
+            "Insalubre para personas sensibles.",
+            "Riesgo general para las personas, efectos más graves en personas sensibles.",
+            "Condición de emergencia.",
+            "Alerta sanitaria, efectos graves para toda la población."
+        ]
+        
+        if sensor.quality.index >= 0 && sensor.quality.index <= 50 {
+            return descriptionList[0]
+        } else if sensor.quality.index >= 51 && sensor.quality.index <= 100 {
+            return descriptionList[1]
+        } else if sensor.quality.index >= 101 && sensor.quality.index <= 150 {
+            return descriptionList[2]
+        } else if sensor.quality.index >= 151 && sensor.quality.index <= 200 {
+            return descriptionList[3]
+        } else if sensor.quality.index >= 201 && sensor.quality.index <= 300 {
+            return descriptionList[4]
+        } else if sensor.quality.index >= 300 {
+            return descriptionList[5]
+        } else {
+            return ""
         }
     }
 }
