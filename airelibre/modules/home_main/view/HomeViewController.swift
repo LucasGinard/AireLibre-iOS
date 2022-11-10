@@ -246,7 +246,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         tvInfoTitle.text = sensor.description
         tvInfoScale.text = "\(sensor.quality.index)"
         tvInfoEmoji.text = self.emojiScale(index: sensor.quality.index)
-        tvInfoDescription.text = getCorrectDescription(sensor: sensor)
+        tvInfoDescription.text = getCorrectDescription(index: sensor.quality.index)
         self.viewInfoSensor?.isHidden = false
         if(animationON){slideUpInfo()}else{
             self.viewInfoSensor?.isHidden = false
@@ -266,7 +266,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         }
     }
     
-    func getCorrectDescription(sensor: SensorResponse) -> String {
+    func getCorrectDescription(index: Int) -> String {
         let descriptionList = [
             "Escaso riesgo de contaminación atmosférica, calidad de aire satisfactoria.",
             "Calidad de aire aceptable, riesgo moderado para la salud de personas sensibles a la contaminación ambiental.",
@@ -276,20 +276,13 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
             "Alerta sanitaria, efectos graves para toda la población."
         ]
         
-        if sensor.quality.index >= 0 && sensor.quality.index <= 50 {
-            return descriptionList[0]
-        } else if sensor.quality.index >= 51 && sensor.quality.index <= 100 {
-            return descriptionList[1]
-        } else if sensor.quality.index >= 101 && sensor.quality.index <= 150 {
-            return descriptionList[2]
-        } else if sensor.quality.index >= 151 && sensor.quality.index <= 200 {
-            return descriptionList[3]
-        } else if sensor.quality.index >= 201 && sensor.quality.index <= 300 {
-            return descriptionList[4]
-        } else if sensor.quality.index >= 300 {
-            return descriptionList[5]
-        } else {
-            return ""
+        switch(index) {
+            case 0...50: return descriptionList[0]
+            case 51...100: return descriptionList[1]
+            case 101...150: return descriptionList[2]
+            case 151...200: return descriptionList[3]
+            case 201...300:  return descriptionList[4]
+            default: return descriptionList[5]
         }
     }
 }
