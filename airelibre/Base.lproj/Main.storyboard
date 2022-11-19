@@ -475,7 +475,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N49-iD-kGd" userLabel="dialogCustom">
-                                <rect key="frame" x="30" y="194" width="354" height="468"/>
+                                <rect key="frame" x="30" y="144" width="354" height="598"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8k-iY-kZb">
                                         <rect key="frame" x="315" y="8" width="24" height="25"/>
@@ -519,7 +519,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-bj-bKm">
-                                        <rect key="frame" x="15" y="151.5" width="324" height="306.5"/>
+                                        <rect key="frame" x="15" y="151.5" width="324" height="436.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -545,10 +545,10 @@
                         <color key="backgroundColor" white="0.0" alpha="0.44647459320674671" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="N49-iD-kGd" firstAttribute="top" secondItem="NZ5-Sp-0h7" secondAttribute="top" constant="150" id="3s0-ak-Sxv"/>
+                            <constraint firstItem="N49-iD-kGd" firstAttribute="top" secondItem="NZ5-Sp-0h7" secondAttribute="top" constant="100" id="3s0-ak-Sxv"/>
                             <constraint firstItem="N49-iD-kGd" firstAttribute="leading" secondItem="NZ5-Sp-0h7" secondAttribute="leading" constant="30" id="BcS-GJ-Tmb"/>
                             <constraint firstItem="NZ5-Sp-0h7" firstAttribute="trailing" secondItem="N49-iD-kGd" secondAttribute="trailing" constant="30" id="Px6-wO-BjR"/>
-                            <constraint firstItem="NZ5-Sp-0h7" firstAttribute="bottom" secondItem="N49-iD-kGd" secondAttribute="bottom" constant="200" id="dba-fe-cqm"/>
+                            <constraint firstItem="NZ5-Sp-0h7" firstAttribute="bottom" secondItem="N49-iD-kGd" secondAttribute="bottom" constant="120" id="dba-fe-cqm"/>
                         </constraints>
                     </view>
                     <connections>
