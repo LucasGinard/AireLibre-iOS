@@ -311,7 +311,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-Ud-Wnn">
-                                <rect key="frame" x="15" y="572" width="384" height="241"/>
+                                <rect key="frame" x="15" y="552.5" width="384" height="260.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sensor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QU7-y0-i5d">
                                         <rect key="frame" x="15" y="15" width="69" height="21.5"/>
@@ -332,10 +332,10 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="hhl-tb-faQ">
-                                        <rect key="frame" x="15" y="95.5" width="354" height="64"/>
+                                        <rect key="frame" x="15" y="95.5" width="354" height="60.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="⚠️🔴" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="68P-KA-4HK">
-                                                <rect key="frame" x="0.0" y="23" width="45" height="18"/>
+                                                <rect key="frame" x="0.0" y="21.5" width="45" height="18"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="45" id="qtQ-5n-CMd"/>
                                                 </constraints>
@@ -344,21 +344,21 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Riesgo General para las personas,efecto mas graaves en personas sensibles" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="6" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TPY-Sx-QEM">
-                                                <rect key="frame" x="52" y="0.0" width="302" height="64"/>
-                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="18"/>
+                                                <rect key="frame" x="52" y="0.0" width="302" height="60.5"/>
+                                                <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="17"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Escala AQI" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUA-Ic-9XZ">
-                                        <rect key="frame" x="15" y="167.5" width="93.5" height="21.5"/>
+                                        <rect key="frame" x="15" y="164" width="93.5" height="21.5"/>
                                         <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="666" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uuW-qO-jKS">
-                                        <rect key="frame" x="15" y="193" width="36.5" height="24"/>
+                                        <rect key="frame" x="15" y="189.5" width="36.5" height="24"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="20"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -377,7 +377,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6k-ya-KYR">
-                                        <rect key="frame" x="112" y="161.5" width="25" height="31"/>
+                                        <rect key="frame" x="112" y="158" width="25" height="31"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="59U-1k-7ZS"/>
                                         </constraints>
@@ -396,7 +396,7 @@
                                     <constraint firstItem="aUA-Ic-9XZ" firstAttribute="top" secondItem="hhl-tb-faQ" secondAttribute="bottom" constant="8" id="5g0-od-yyY"/>
                                     <constraint firstItem="5Ui-XL-3rp" firstAttribute="top" secondItem="V1E-Um-xCd" secondAttribute="bottom" constant="8" id="G7l-oZ-ZqY"/>
                                     <constraint firstItem="b6k-ya-KYR" firstAttribute="top" secondItem="hhl-tb-faQ" secondAttribute="bottom" constant="2" id="Hh9-77-dnw"/>
-                                    <constraint firstAttribute="width" secondItem="BT1-Ud-Wnn" secondAttribute="height" multiplier="180:113" id="Ipe-gI-c7D"/>
+                                    <constraint firstAttribute="width" secondItem="BT1-Ud-Wnn" secondAttribute="height" multiplier="180:122" id="Ipe-gI-c7D"/>
                                     <constraint firstAttribute="trailing" secondItem="3lC-h6-olu" secondAttribute="trailing" constant="20" id="Jtb-Q9-hur"/>
                                     <constraint firstItem="QU7-y0-i5d" firstAttribute="top" secondItem="BT1-Ud-Wnn" secondAttribute="top" constant="15" id="KPY-md-zfn"/>
                                     <constraint firstAttribute="trailing" secondItem="hhl-tb-faQ" secondAttribute="trailing" constant="15" id="LdG-fU-la9"/>
