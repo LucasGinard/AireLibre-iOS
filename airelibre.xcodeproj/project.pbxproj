@@ -35,7 +35,7 @@
 
 /* Begin PBXFileReference section */
 		4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airelibre.release.xcconfig"; path = "Target Support Files/Pods-airelibre/Pods-airelibre.release.xcconfig"; sourceTree = "<group>"; };
-		52669A4A28E7CC40009DA821 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfigViewController.swift; path = config/ConfigViewController.swift; sourceTree = "<group>"; };
+		52669A4A28E7CC40009DA821 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		52669A4E28E7CD4E009DA821 /* disket_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_regular.ttf; sourceTree = "<group>"; };
 		52669A4F28E7CD4E009DA821 /* rubik_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_bold.ttf; sourceTree = "<group>"; };
 		52669A5028E7CD4E009DA821 /* rubik_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_regular.ttf; sourceTree = "<group>"; };
@@ -87,6 +87,7 @@
 		52669A4928E7CC06009DA821 /* config */ = {
 			isa = PBXGroup;
 			children = (
+				52669A4A28E7CC40009DA821 /* ConfigViewController.swift */,
 			);
 			path = config;
 			sourceTree = "<group>";
@@ -185,7 +186,6 @@
 			isa = PBXGroup;
 			children = (
 				52669A4928E7CC06009DA821 /* config */,
-				52669A4A28E7CC40009DA821 /* ConfigViewController.swift */,
 				527FC41028D3E9E6001A5FF6 /* about */,
 				527FC40428D3E9A7001A5FF6 /* utils */,
 				52A97829280638F3006A877D /* data */,
