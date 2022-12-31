@@ -39,18 +39,15 @@ class AboutViewController: UIViewController {
     }
         
     @IBAction func onClickTwitter(_ sender: Any) {
-        let lowerCaseSocialNetworkName = "twitter"
-           let socialNetworkDomain = "com"
-           let userName = "KoaNdeAire"
-           let appURL = URL(string: "\(lowerCaseSocialNetworkName)://user? screen_name=\(userName)")!
-           let application = UIApplication.shared
-         
-           if application.canOpenURL(appURL) {
-              application.open(appURL)
-           } else {
-              let webURL = URL(string:"https://\(lowerCaseSocialNetworkName).\(socialNetworkDomain)/\(userName)")!
-           application.open(webURL)
-           }
+        let screenName =  "KoaNdeAire"
+        let appURL = NSURL(string: "twitter://user?screen_name=\(screenName)")!
+        let webURL = NSURL(string: "https://twitter.com/\(screenName)")!
+        let application = UIApplication.shared
+        if application.canOpenURL(appURL as URL) {
+            application.open(appURL as URL)
+        } else {
+            application.open(webURL as URL)
+        }
     }
     
     @IBAction func onClickWeb(_ sender: Any) {

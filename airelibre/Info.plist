@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>twitter</string>
-	</array>
 	<key>UIAppFonts</key>
 	<array>
 		<string>disket_bold.ttf</string>
@@ -32,5 +28,9 @@
 			</array>
 		</dict>
 	</dict>
+    <key>LSApplicationQueriesSchemes</key>
+    <array>
+        <string>twitter</string>
+    </array>
 </dict>
 </plist>
