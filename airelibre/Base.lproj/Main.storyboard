@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nUS-tg-opI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nUS-tg-opI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -51,10 +51,23 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="9Kr-Rb-x4m">
-                                        <rect key="frame" x="132" y="144" width="120" height="50"/>
+                                        <rect key="frame" x="97" y="144" width="190" height="50"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-Bc-jO3">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CjD-OJ-d43">
                                                 <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="NcE-9S-UNV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="a6I-hd-6ie"/>
+                                                </constraints>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" backgroundImage="iconMastodon"/>
+                                                <connections>
+                                                    <action selector="onClickMastodon:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uCX-Zp-12v"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GwT-Bc-jO3">
+                                                <rect key="frame" x="70" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="50" id="TD1-Kf-laX"/>
                                                     <constraint firstAttribute="width" constant="50" id="gbj-gY-fJ0"/>
@@ -67,7 +80,7 @@
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HkO-Dd-AOf">
-                                                <rect key="frame" x="70" y="0.0" width="50" height="50"/>
+                                                <rect key="frame" x="140" y="0.0" width="50" height="50"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="50" id="FAj-t6-nki"/>
                                                     <constraint firstAttribute="height" constant="50" id="muG-8D-Tlm"/>
@@ -159,6 +172,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="iconAbout" id="Si7-Pu-ekR"/>
                     <connections>
+                        <outlet property="btnMastodon" destination="CjD-OJ-d43" id="JxV-KY-aRB"/>
                         <outlet property="btnTwitter" destination="GwT-Bc-jO3" id="2M3-Fa-buP"/>
                         <outlet property="btnWeb" destination="HkO-Dd-AOf" id="djf-ce-rA1"/>
                         <outlet property="tvCreator" destination="j5W-X7-sA1" id="V6a-gx-i3u"/>
@@ -305,7 +319,7 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="A|L" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T4A-7y-MlN">
-                                <rect key="frame" x="347" y="68" width="42" height="23"/>
+                                <rect key="frame" x="347" y="72" width="42" height="23"/>
                                 <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -377,7 +391,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b6k-ya-KYR">
-                                        <rect key="frame" x="112" y="158" width="25" height="31"/>
+                                        <rect key="frame" x="112" y="158" width="25" height="34"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="25" id="59U-1k-7ZS"/>
                                         </constraints>
@@ -475,7 +489,7 @@
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N49-iD-kGd" userLabel="dialogCustom">
-                                <rect key="frame" x="30" y="144" width="354" height="598"/>
+                                <rect key="frame" x="30" y="148" width="354" height="594"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g8k-iY-kZb">
                                         <rect key="frame" x="315" y="8" width="24" height="25"/>
@@ -519,7 +533,7 @@
                                         </subviews>
                                     </stackView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Pc7-bj-bKm">
-                                        <rect key="frame" x="15" y="151.5" width="324" height="436.5"/>
+                                        <rect key="frame" x="15" y="151.5" width="324" height="432.5"/>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                     </tableView>
                                 </subviews>
@@ -568,14 +582,15 @@
         <image name="iconAbout" width="35" height="35"/>
         <image name="iconClose" width="256" height="256"/>
         <image name="iconConfig" width="35" height="35"/>
+        <image name="iconMastodon" width="256" height="256"/>
         <image name="iconSensor" width="35" height="35"/>
         <image name="iconTwitter" width="320" height="320"/>
         <image name="iconWeb" width="320" height="320"/>
         <image name="icon_close_black" width="256" height="256"/>
-        <image name="moon.fill" catalog="system" width="128" height="121"/>
-        <image name="questionmark.circle" catalog="system" width="128" height="121"/>
+        <image name="moon.fill" catalog="system" width="128" height="123"/>
+        <image name="questionmark.circle" catalog="system" width="128" height="123"/>
         <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

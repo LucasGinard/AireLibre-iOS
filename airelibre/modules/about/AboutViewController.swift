@@ -15,6 +15,7 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var tvIconApp: UILabel!
     @IBOutlet weak var btnTwitter: UIButton!
     @IBOutlet weak var btnWeb: UIButton!
+    @IBOutlet weak var btnMastodon: UIButton!
     
     private let linkColorDark = UIColor.init("176EFF")
     
@@ -37,7 +38,14 @@ class AboutViewController: UIViewController {
             self.tvIconApp.textColor = linkColorDark
         }
     }
-        
+    
+    
+    @IBAction func onClickMastodon(_ sender: Any) {
+        if let url = NSURL(string: "https://terere.social/@AireLibre"){
+            UIApplication.shared.open(url as URL)
+        }
+    }
+    
     @IBAction func onClickTwitter(_ sender: Any) {
         let screenName =  "KoaNdeAire"
         let appURL = NSURL(string: "twitter://user?screen_name=\(screenName)")!
