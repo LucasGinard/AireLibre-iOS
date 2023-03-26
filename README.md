@@ -8,7 +8,7 @@ Versión iOS en Swift de AireLibre: http://airelib.re
 
 :octocat: Repo: https://github.com/melizeche/AireLibre
 
-🤖 Repo Android: https://github.com/melizeche/AireLibre
+🤖 Repo Android: https://github.com/LucasGinard/AireLibre-Android
 
 
 ## Construido con 🛠️ (Build in)
