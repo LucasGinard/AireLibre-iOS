@@ -14,6 +14,8 @@
 		52035121295FB6950007D553 /* disket_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A4E28E7CD4E009DA821 /* disket_regular.ttf */; };
 		52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669A4A28E7CC40009DA821 /* ConfigViewController.swift */; };
 		52669A5328E7D42C009DA821 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5228E7D42C009DA821 /* style.json */; };
+		5274D53329B6510300B9C7E5 /* airelibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53229B6510300B9C7E5 /* airelibreUITests.swift */; };
+		5274D53529B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */; };
 		527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */; };
 		527FC40B28D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */; };
 		527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */; };
@@ -33,6 +35,16 @@
 		52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C636F928029A3D005CDBD4 /* BaseTabBarController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		5274D53629B6510300B9C7E5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52C636D628028C98005CDBD4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52C636DD28028C99005CDBD4;
+			remoteInfo = airelibre;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airelibre.release.xcconfig"; path = "Target Support Files/Pods-airelibre/Pods-airelibre.release.xcconfig"; sourceTree = "<group>"; };
 		52669A4A28E7CC40009DA821 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
@@ -41,6 +53,9 @@
 		52669A5028E7CD4E009DA821 /* rubik_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_regular.ttf; sourceTree = "<group>"; };
 		52669A5128E7CD4E009DA821 /* disket_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_bold.ttf; sourceTree = "<group>"; };
 		52669A5228E7D42C009DA821 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		5274D53029B6510300B9C7E5 /* airelibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airelibreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5274D53229B6510300B9C7E5 /* airelibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITests.swift; sourceTree = "<group>"; };
+		5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheUtils.swift; sourceTree = "<group>"; };
 		527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogInfoAQIViewController.swift; sourceTree = "<group>"; };
 		527FC40728D3E9BE001A5FF6 /* InfoAQITableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InfoAQITableViewCell.swift; sourceTree = "<group>"; };
@@ -65,6 +80,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5274D52D29B6510300B9C7E5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52C636DB28028C99005CDBD4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,6 +123,15 @@
 				52669A5028E7CD4E009DA821 /* rubik_regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		5274D53129B6510300B9C7E5 /* airelibreUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5274D53229B6510300B9C7E5 /* airelibreUITests.swift */,
+				5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */,
+			);
+			path = airelibreUITests;
 			sourceTree = "<group>";
 		};
 		527FC40428D3E9A7001A5FF6 /* utils */ = {
@@ -151,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				52C636E028028C99005CDBD4 /* airelibre */,
+				5274D53129B6510300B9C7E5 /* airelibreUITests */,
 				52C636DF28028C99005CDBD4 /* Products */,
 				87811A2523F5C9F699E65F2C /* Pods */,
 				05CE592AD97052A0B15FC0BD /* Frameworks */,
@@ -161,6 +193,7 @@
 			isa = PBXGroup;
 			children = (
 				52C636DE28028C99005CDBD4 /* airelibre.app */,
+				5274D53029B6510300B9C7E5 /* airelibreUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -233,6 +266,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5274D52F29B6510300B9C7E5 /* airelibreUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5274D53A29B6510300B9C7E5 /* Build configuration list for PBXNativeTarget "airelibreUITests" */;
+			buildPhases = (
+				5274D52C29B6510300B9C7E5 /* Sources */,
+				5274D52D29B6510300B9C7E5 /* Frameworks */,
+				5274D52E29B6510300B9C7E5 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5274D53729B6510300B9C7E5 /* PBXTargetDependency */,
+			);
+			name = airelibreUITests;
+			productName = airelibreUITests;
+			productReference = 5274D53029B6510300B9C7E5 /* airelibreUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		52C636DD28028C99005CDBD4 /* airelibre */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52C636F228028C9C005CDBD4 /* Build configuration list for PBXNativeTarget "airelibre" */;
@@ -260,9 +311,13 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1320;
+				LastSwiftUpdateCheck = 1420;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					5274D52F29B6510300B9C7E5 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = 52C636DD28028C99005CDBD4;
+					};
 					52C636DD28028C99005CDBD4 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -282,11 +337,19 @@
 			projectRoot = "";
 			targets = (
 				52C636DD28028C99005CDBD4 /* airelibre */,
+				5274D52F29B6510300B9C7E5 /* airelibreUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5274D52E29B6510300B9C7E5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52C636DC28028C99005CDBD4 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -366,6 +429,15 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5274D52C29B6510300B9C7E5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5274D53529B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift in Sources */,
+				5274D53329B6510300B9C7E5 /* airelibreUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		52C636DA28028C99005CDBD4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,6 +460,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		5274D53729B6510300B9C7E5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52C636DD28028C99005CDBD4 /* airelibre */;
+			targetProxy = 5274D53629B6510300B9C7E5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		52C636E728028C99005CDBD4 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -408,6 +488,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5274D53829B6510300B9C7E5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LMVK4FRCB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasginard.airelibreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = airelibre;
+			};
+			name = Debug;
+		};
+		5274D53929B6510300B9C7E5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = LMVK4FRCB7;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lucasginard.airelibreUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = airelibre;
+			};
+			name = Release;
+		};
 		52C636F028028C9C005CDBD4 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -535,7 +653,8 @@
 				DEVELOPMENT_TEAM = LMVK4FRCB7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = airelibre/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = AireLibre;
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -550,9 +669,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasginard.airelibre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -567,7 +689,8 @@
 				DEVELOPMENT_TEAM = LMVK4FRCB7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = airelibre/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = AireLibre;
+				INFOPLIST_KEY_CFBundleDisplayName = "Aire Libre";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.sports";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -582,15 +705,27 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.lucasginard.airelibre;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5274D53A29B6510300B9C7E5 /* Build configuration list for PBXNativeTarget "airelibreUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5274D53829B6510300B9C7E5 /* Debug */,
+				5274D53929B6510300B9C7E5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		52C636D928028C98005CDBD4 /* Build configuration list for PBXProject "airelibre" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

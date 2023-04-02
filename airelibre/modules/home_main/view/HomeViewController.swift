@@ -43,8 +43,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         configureUI()
         gestureDownInfoMarker()
         mapView.isMyLocationEnabled = true
-        mapView.settings.myLocationButton = true
-        mapView.padding = UIEdgeInsets(top: 0, left: 0, bottom: 625, right: 25)
     }
     
     override func viewWillAppear(_ animated: Bool) {
