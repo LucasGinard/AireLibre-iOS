@@ -13,14 +13,44 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var swDarkMode: UISwitch!
     @IBOutlet weak var swLocation: UISwitch!
     @IBOutlet weak var tvVersion: UILabel!
-    
+    @IBOutlet weak var stackThemesMaps: UIStackView!
+
     private let manager = CLLocationManager()
 
+    let collectionView: UICollectionView = {
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+            cv.showsHorizontalScrollIndicator = false
+            return cv
+        }()
+    var data = [CircularItemModel]()
+    var selectedIndex = -1
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self
         configureUI()
         themeApp()
+        
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CircularItemCell.self, forCellWithReuseIdentifier: "CircularItemCell")
+        stackThemesMaps.addArrangedSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            collectionView.heightAnchor.constraint(equalToConstant: 120)
+        ])
+        data = [
+            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
+            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
+            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
+            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
+            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
+            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 2")
+        ]
+        collectionView.reloadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -110,4 +140,35 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
         }
     }
     
+}
+
+extension ConfigViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        // Actualización del índice seleccionado y recarga de datos del collectionView
+        selectedIndex = indexPath.row
+        collectionView.reloadData()
+    }
+}
+
+extension ConfigViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CircularItemCell", for: indexPath) as! CircularItemCell
+        let isSelected = indexPath.row == selectedIndex
+        cell.configure(with: data[indexPath.row], isSelected: isSelected)
+        return cell
+    }
+}
+
+extension ConfigViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 65, height: 95)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return 8
+    }
 }

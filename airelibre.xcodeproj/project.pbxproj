@@ -14,6 +14,7 @@
 		52035121295FB6950007D553 /* disket_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A4E28E7CD4E009DA821 /* disket_regular.ttf */; };
 		52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669A4A28E7CC40009DA821 /* ConfigViewController.swift */; };
 		52669A5328E7D42C009DA821 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5228E7D42C009DA821 /* style.json */; };
+		526BA09629D918A500F2D40A /* CircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BA09529D918A500F2D40A /* CircularItemModel.swift */; };
 		5274D53329B6510300B9C7E5 /* airelibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53229B6510300B9C7E5 /* airelibreUITests.swift */; };
 		5274D53529B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */; };
 		527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */; };
@@ -23,6 +24,7 @@
 		527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */; };
 		527FC41228D3E9F2001A5FF6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */; };
 		527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */; };
+		529D82F129DA3FC50033F26D /* CircularItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D82F029DA3FC50033F26D /* CircularItemCell.swift */; };
 		52A97828280632E4006A877D /* SensorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A97827280632E4006A877D /* SensorResponse.swift */; };
 		52A9782B2806390B006A877D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782A2806390B006A877D /* APIService.swift */; };
 		52A9782E28063A2E006A877D /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782D28063A2E006A877D /* HomeViewModel.swift */; };
@@ -53,6 +55,7 @@
 		52669A5028E7CD4E009DA821 /* rubik_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_regular.ttf; sourceTree = "<group>"; };
 		52669A5128E7CD4E009DA821 /* disket_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_bold.ttf; sourceTree = "<group>"; };
 		52669A5228E7D42C009DA821 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		526BA09529D918A500F2D40A /* CircularItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularItemModel.swift; sourceTree = "<group>"; };
 		5274D53029B6510300B9C7E5 /* airelibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airelibreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5274D53229B6510300B9C7E5 /* airelibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITests.swift; sourceTree = "<group>"; };
 		5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -63,6 +66,7 @@
 		527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoAQITableViewCell.xib; sourceTree = "<group>"; };
 		527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		529D82F029DA3FC50033F26D /* CircularItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularItemCell.swift; sourceTree = "<group>"; };
 		52A97827280632E4006A877D /* SensorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorResponse.swift; sourceTree = "<group>"; };
 		52A9782A2806390B006A877D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		52A9782D28063A2E006A877D /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -123,6 +127,39 @@
 				52669A5028E7CD4E009DA821 /* rubik_regular.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		526BA09229D9184E00F2D40A /* components */ = {
+			isa = PBXGroup;
+			children = (
+				526BA09329D9185A00F2D40A /* CircleList */,
+			);
+			path = components;
+			sourceTree = "<group>";
+		};
+		526BA09329D9185A00F2D40A /* CircleList */ = {
+			isa = PBXGroup;
+			children = (
+				526BA09729D9196A00F2D40A /* view */,
+				526BA09429D9189200F2D40A /* model */,
+			);
+			path = CircleList;
+			sourceTree = "<group>";
+		};
+		526BA09429D9189200F2D40A /* model */ = {
+			isa = PBXGroup;
+			children = (
+				526BA09529D918A500F2D40A /* CircularItemModel.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		526BA09729D9196A00F2D40A /* view */ = {
+			isa = PBXGroup;
+			children = (
+				529D82F029DA3FC50033F26D /* CircularItemCell.swift */,
+			);
+			path = view;
 			sourceTree = "<group>";
 		};
 		5274D53129B6510300B9C7E5 /* airelibreUITests */ = {
@@ -201,13 +238,16 @@
 		52C636E028028C99005CDBD4 /* airelibre */ = {
 			isa = PBXGroup;
 			children = (
-				52669A5228E7D42C009DA821 /* style.json */,
-				52669A4D28E7CD1F009DA821 /* fonts */,
+				526BA09229D9184E00F2D40A /* components */,
+				52A97829280638F3006A877D /* data */,
 				52C636F5280293F0005CDBD4 /* modules */,
+				527FC40428D3E9A7001A5FF6 /* utils */,
+				52669A4D28E7CD1F009DA821 /* fonts */,
 				52C636E128028C99005CDBD4 /* AppDelegate.swift */,
 				52C636E328028C99005CDBD4 /* SceneDelegate.swift */,
 				52C636E728028C99005CDBD4 /* Main.storyboard */,
 				52C636EA28028C9C005CDBD4 /* Assets.xcassets */,
+				52669A5228E7D42C009DA821 /* style.json */,
 				52C636EC28028C9C005CDBD4 /* LaunchScreen.storyboard */,
 				527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */,
 				52C636EF28028C9C005CDBD4 /* Info.plist */,
@@ -220,8 +260,6 @@
 			children = (
 				52669A4928E7CC06009DA821 /* config */,
 				527FC41028D3E9E6001A5FF6 /* about */,
-				527FC40428D3E9A7001A5FF6 /* utils */,
-				52A97829280638F3006A877D /* data */,
 				52C636FB28029B59005CDBD4 /* home_main */,
 				52C636F8280299FA005CDBD4 /* navigation */,
 			);
@@ -446,6 +484,8 @@
 				527FC40B28D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift in Sources */,
 				527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */,
 				52C636E228028C99005CDBD4 /* AppDelegate.swift in Sources */,
+				529D82F129DA3FC50033F26D /* CircularItemCell.swift in Sources */,
+				526BA09629D918A500F2D40A /* CircularItemModel.swift in Sources */,
 				52A9782E28063A2E006A877D /* HomeViewModel.swift in Sources */,
 				52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */,
 				52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */,
