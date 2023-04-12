@@ -43,12 +43,14 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
             collectionView.heightAnchor.constraint(equalToConstant: 120)
         ])
         data = [
-            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
-            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
-            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
-            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
-            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 1"),
-            CircularItemModel(image: UIImage(named: "iconAbout")!, title: "Título 2")
+            CircularItemModel(image: UIImage(named: "ThemeMapPred")!, title: "Pred"),
+            CircularItemModel(image: UIImage(named: "ThemeMapUber")!, title: "Uber"),
+            CircularItemModel(image: UIImage(named: "ThemeMapRetro")!, title: "Retro"),
+            CircularItemModel(image: UIImage(named: "ThemeMapBlueLight")!, title: "Celeste"),
+            CircularItemModel(image: UIImage(named: "ThemeMapBlue")!, title: "Azul"),
+            CircularItemModel(image: UIImage(named: "ThemeMapCyber")!, title: "Futurista"),
+            CircularItemModel(image: UIImage(named: "ThemeMapFallout")!, title: "Fallout"),
+            CircularItemModel(image: UIImage(named: "ThemeMapGTA")!, title: "GTA")
         ]
         collectionView.reloadData()
     }
