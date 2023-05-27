@@ -13,7 +13,7 @@
 		52035120295FB6950007D553 /* rubik_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5028E7CD4E009DA821 /* rubik_regular.ttf */; };
 		52035121295FB6950007D553 /* disket_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A4E28E7CD4E009DA821 /* disket_regular.ttf */; };
 		52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669A4A28E7CC40009DA821 /* ConfigViewController.swift */; };
-		52669A5328E7D42C009DA821 /* style.json in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5228E7D42C009DA821 /* style.json */; };
+		52669A5328E7D42C009DA821 /* mapstyle_night.json in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5228E7D42C009DA821 /* mapstyle_night.json */; };
 		526BA09629D918A500F2D40A /* CircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BA09529D918A500F2D40A /* CircularItemModel.swift */; };
 		5274D53329B6510300B9C7E5 /* airelibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53229B6510300B9C7E5 /* airelibreUITests.swift */; };
 		5274D53529B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */; };
@@ -24,6 +24,13 @@
 		527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */; };
 		527FC41228D3E9F2001A5FF6 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */; };
 		527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */; };
+		5297F05C2A22C2E50012486A /* mapstyle_blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F05B2A22C2E50012486A /* mapstyle_blue.json */; };
+		5297F05E2A22C3040012486A /* mapstyle_cyber.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F05D2A22C3040012486A /* mapstyle_cyber.json */; };
+		5297F0602A22C3210012486A /* mapstyle_fallout.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F05F2A22C3210012486A /* mapstyle_fallout.json */; };
+		5297F0622A22C3410012486A /* mapstyle_gta.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F0612A22C3410012486A /* mapstyle_gta.json */; };
+		5297F0642A22C36D0012486A /* mapstyle_light_blue.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F0632A22C36D0012486A /* mapstyle_light_blue.json */; };
+		5297F0662A22C38D0012486A /* mapstyle_retro.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F0652A22C38D0012486A /* mapstyle_retro.json */; };
+		5297F0682A22C3AB0012486A /* mapstyle_uber.json in Resources */ = {isa = PBXBuildFile; fileRef = 5297F0672A22C3AB0012486A /* mapstyle_uber.json */; };
 		529D82F129DA3FC50033F26D /* CircularItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 529D82F029DA3FC50033F26D /* CircularItemCell.swift */; };
 		52A97828280632E4006A877D /* SensorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A97827280632E4006A877D /* SensorResponse.swift */; };
 		52A9782B2806390B006A877D /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A9782A2806390B006A877D /* APIService.swift */; };
@@ -54,7 +61,7 @@
 		52669A4F28E7CD4E009DA821 /* rubik_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_bold.ttf; sourceTree = "<group>"; };
 		52669A5028E7CD4E009DA821 /* rubik_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_regular.ttf; sourceTree = "<group>"; };
 		52669A5128E7CD4E009DA821 /* disket_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_bold.ttf; sourceTree = "<group>"; };
-		52669A5228E7D42C009DA821 /* style.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = style.json; sourceTree = "<group>"; };
+		52669A5228E7D42C009DA821 /* mapstyle_night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapstyle_night.json; sourceTree = "<group>"; };
 		526BA09529D918A500F2D40A /* CircularItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularItemModel.swift; sourceTree = "<group>"; };
 		5274D53029B6510300B9C7E5 /* airelibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airelibreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5274D53229B6510300B9C7E5 /* airelibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITests.swift; sourceTree = "<group>"; };
@@ -66,6 +73,13 @@
 		527FC40928D3E9BE001A5FF6 /* InfoAQITableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoAQITableViewCell.xib; sourceTree = "<group>"; };
 		527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5297F05B2A22C2E50012486A /* mapstyle_blue.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_blue.json; sourceTree = "<group>"; };
+		5297F05D2A22C3040012486A /* mapstyle_cyber.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_cyber.json; sourceTree = "<group>"; };
+		5297F05F2A22C3210012486A /* mapstyle_fallout.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_fallout.json; sourceTree = "<group>"; };
+		5297F0612A22C3410012486A /* mapstyle_gta.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_gta.json; sourceTree = "<group>"; };
+		5297F0632A22C36D0012486A /* mapstyle_light_blue.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_light_blue.json; sourceTree = "<group>"; };
+		5297F0652A22C38D0012486A /* mapstyle_retro.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_retro.json; sourceTree = "<group>"; };
+		5297F0672A22C3AB0012486A /* mapstyle_uber.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = mapstyle_uber.json; sourceTree = "<group>"; };
 		529D82F029DA3FC50033F26D /* CircularItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularItemCell.swift; sourceTree = "<group>"; };
 		52A97827280632E4006A877D /* SensorResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SensorResponse.swift; sourceTree = "<group>"; };
 		52A9782A2806390B006A877D /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
@@ -191,6 +205,21 @@
 			path = about;
 			sourceTree = "<group>";
 		};
+		5297F05A2A22B1F60012486A /* themes */ = {
+			isa = PBXGroup;
+			children = (
+				52669A5228E7D42C009DA821 /* mapstyle_night.json */,
+				5297F05B2A22C2E50012486A /* mapstyle_blue.json */,
+				5297F05D2A22C3040012486A /* mapstyle_cyber.json */,
+				5297F05F2A22C3210012486A /* mapstyle_fallout.json */,
+				5297F0612A22C3410012486A /* mapstyle_gta.json */,
+				5297F0632A22C36D0012486A /* mapstyle_light_blue.json */,
+				5297F0652A22C38D0012486A /* mapstyle_retro.json */,
+				5297F0672A22C3AB0012486A /* mapstyle_uber.json */,
+			);
+			path = themes;
+			sourceTree = "<group>";
+		};
 		52A97829280638F3006A877D /* data */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,6 +267,7 @@
 		52C636E028028C99005CDBD4 /* airelibre */ = {
 			isa = PBXGroup;
 			children = (
+				5297F05A2A22B1F60012486A /* themes */,
 				526BA09229D9184E00F2D40A /* components */,
 				52A97829280638F3006A877D /* data */,
 				52C636F5280293F0005CDBD4 /* modules */,
@@ -247,7 +277,6 @@
 				52C636E328028C99005CDBD4 /* SceneDelegate.swift */,
 				52C636E728028C99005CDBD4 /* Main.storyboard */,
 				52C636EA28028C9C005CDBD4 /* Assets.xcassets */,
-				52669A5228E7D42C009DA821 /* style.json */,
 				52C636EC28028C9C005CDBD4 /* LaunchScreen.storyboard */,
 				527FC41928D3ED7A001A5FF6 /* GoogleService-Info.plist */,
 				52C636EF28028C9C005CDBD4 /* Info.plist */,
@@ -393,14 +422,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				5203511E295FB6900007D553 /* disket_bold.ttf in Resources */,
+				5297F05C2A22C2E50012486A /* mapstyle_blue.json in Resources */,
 				52035120295FB6950007D553 /* rubik_regular.ttf in Resources */,
 				52C636EE28028C9C005CDBD4 /* LaunchScreen.storyboard in Resources */,
+				5297F0642A22C36D0012486A /* mapstyle_light_blue.json in Resources */,
+				5297F0682A22C3AB0012486A /* mapstyle_uber.json in Resources */,
+				5297F0662A22C38D0012486A /* mapstyle_retro.json in Resources */,
 				52C636EB28028C9C005CDBD4 /* Assets.xcassets in Resources */,
 				52C636E928028C99005CDBD4 /* Main.storyboard in Resources */,
-				52669A5328E7D42C009DA821 /* style.json in Resources */,
+				52669A5328E7D42C009DA821 /* mapstyle_night.json in Resources */,
+				5297F0622A22C3410012486A /* mapstyle_gta.json in Resources */,
 				527FC40E28D3E9BE001A5FF6 /* InfoAQITableViewCell.xib in Resources */,
 				527FC41A28D3ED7A001A5FF6 /* GoogleService-Info.plist in Resources */,
 				5203511F295FB6950007D553 /* rubik_bold.ttf in Resources */,
+				5297F05E2A22C3040012486A /* mapstyle_cyber.json in Resources */,
+				5297F0602A22C3210012486A /* mapstyle_fallout.json in Resources */,
 				52035121295FB6950007D553 /* disket_regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

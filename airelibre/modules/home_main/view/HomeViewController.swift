@@ -115,7 +115,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         if(theme == nil){
             if self.traitCollection.userInterfaceStyle == .dark {
                 do {
-                    if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                    if let styleURL = Bundle.main.url(forResource: "mapstyle_night", withExtension: "json") {
                       mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
                     }
                   } catch {
@@ -127,7 +127,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         }else{
             if(theme == "Dark"){
                 do {
-                    if let styleURL = Bundle.main.url(forResource: "style", withExtension: "json") {
+                    if let styleURL = Bundle.main.url(forResource: "mapstyle_night", withExtension: "json") {
                       mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
                     }
                   } catch {
