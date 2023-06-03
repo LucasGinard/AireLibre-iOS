@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 enum ThemesMap:String {
     case predMap
@@ -20,21 +21,21 @@ enum ThemesMap:String {
     func getMapTheme(_ theme:ThemesMap)-> MapModel{
         switch(theme){
         case .predMap:
-            return MapModel(name: "Pred", map: Bundle.main.url(forResource: "mapstyle_night", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: (UserDefaults.standard.string(forKey: "isDarkMode") != nil) ? .white : .black )
+            return MapModel(name: "Pred", map: Bundle.main.url(forResource: "mapstyle_night", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: (UserDefaults.standard.string(forKey: "isDarkMode") != nil) ? .white : .black,imagePreview: UIImage(named: "ThemeMapPred")! )
         case .uber:
-            return MapModel(name: "Uber", map: Bundle.main.url(forResource: "mapstyle_uber", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black)
+            return MapModel(name: "Uber", map: Bundle.main.url(forResource: "mapstyle_uber", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black,imagePreview: UIImage(named: "ThemeMapUber")!)
         case .retro:
-            return MapModel(name: "Retro", map: Bundle.main.url(forResource: "mapstyle_retro", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black)
+            return MapModel(name: "Retro", map: Bundle.main.url(forResource: "mapstyle_retro", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black,imagePreview:UIImage(named: "ThemeMapRetro")!)
         case .bluelLight:
-            return MapModel(name: "Celeste", map: Bundle.main.url(forResource: "mapstyle_light_blue", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black)
+            return MapModel(name: "Celeste", map: Bundle.main.url(forResource: "mapstyle_light_blue", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black,imagePreview:UIImage(named: "ThemeMapBlueLight")!)
         case .blue:
-            return MapModel(name: "Azul", map: Bundle.main.url(forResource: "mapstyle_blue", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white)
+            return MapModel(name: "Azul", map: Bundle.main.url(forResource: "mapstyle_blue", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white,imagePreview:UIImage(named: "ThemeMapBlue")!)
         case .cyber:
-            return MapModel(name: "Futurista", map: Bundle.main.url(forResource: "mapstyle_cyber", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white)
+            return MapModel(name: "Futurista", map: Bundle.main.url(forResource: "mapstyle_cyber", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white,imagePreview:UIImage(named: "ThemeMapCyber")!)
         case .fallout:
-            return MapModel(name: "Fallout", map: Bundle.main.url(forResource: "mapstyle_fallout", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white)
+            return MapModel(name: "Fallout", map: Bundle.main.url(forResource: "mapstyle_fallout", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white,imagePreview:UIImage(named: "ThemeMapFallout")!)
         case .gta:
-            return MapModel(name: "GTA", map: Bundle.main.url(forResource: "mapstyle_gta", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white)
+            return MapModel(name: "GTA", map: Bundle.main.url(forResource: "mapstyle_gta", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .white,imagePreview:UIImage(named: "ThemeMapGTA")!)
         }
     }
 }

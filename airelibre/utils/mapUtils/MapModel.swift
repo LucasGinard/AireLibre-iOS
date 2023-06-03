@@ -12,4 +12,5 @@ struct MapModel{
     let name:String
     let map:URL
     let textColor:UIColor
+    let imagePreview:UIImage
 }
