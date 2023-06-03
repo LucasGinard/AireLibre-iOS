@@ -16,6 +16,7 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var stackThemesMaps: UIStackView!
 
     private let manager = CLLocationManager()
+    private var viewModel:ConfigViewModel = ConfigViewModel()
 
     let collectionView: UICollectionView = {
             let layout = UICollectionViewFlowLayout()
@@ -24,8 +25,8 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
             cv.showsHorizontalScrollIndicator = false
             return cv
         }()
-    var data = [CircularItemModel]()
-    var selectedIndex = -1
+    
+    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,16 +43,7 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
         NSLayoutConstraint.activate([
             collectionView.heightAnchor.constraint(equalToConstant: 120)
         ])
-        data = [
-            CircularItemModel(image: UIImage(named: "ThemeMapPred")!, title: "Pred"),
-            CircularItemModel(image: UIImage(named: "ThemeMapUber")!, title: "Uber"),
-            CircularItemModel(image: UIImage(named: "ThemeMapRetro")!, title: "Retro"),
-            CircularItemModel(image: UIImage(named: "ThemeMapBlueLight")!, title: "Celeste"),
-            CircularItemModel(image: UIImage(named: "ThemeMapBlue")!, title: "Azul"),
-            CircularItemModel(image: UIImage(named: "ThemeMapCyber")!, title: "Futurista"),
-            CircularItemModel(image: UIImage(named: "ThemeMapFallout")!, title: "Fallout"),
-            CircularItemModel(image: UIImage(named: "ThemeMapGTA")!, title: "GTA")
-        ]
+        
         collectionView.reloadData()
     }
     
@@ -148,19 +140,20 @@ extension ConfigViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Actualización del índice seleccionado y recarga de datos del collectionView
         selectedIndex = indexPath.row
+        self.viewModel.setSaveThemeSelected(position: selectedIndex)
         collectionView.reloadData()
     }
 }
 
 extension ConfigViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return data.count
+        return viewModel.getMapThemes().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CircularItemCell", for: indexPath) as! CircularItemCell
         let isSelected = indexPath.row == selectedIndex
-        cell.configure(with: data[indexPath.row], isSelected: isSelected)
+        cell.configure(with: viewModel.getMapThemes()[indexPath.row], isSelected: isSelected)
         return cell
     }
 }

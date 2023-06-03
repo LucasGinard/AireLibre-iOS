@@ -138,6 +138,15 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
             }
         }
         
+        if let rawValue = UserDefaults.standard.value(forKey: "selectedTheme") as?String,
+           let selectedTheme = ThemesMap(rawValue: rawValue) {
+            let theme = selectedTheme.getMapTheme(selectedTheme).map
+            do {
+                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: theme)
+              } catch {
+                NSLog("One or more of the map styles failed to load. \(error)")
+              }
+        }
     }
     
     private func callService(){

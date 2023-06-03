@@ -11,4 +11,5 @@ import UIKit
 struct CircularItemModel {
     let image: UIImage
     let title: String
+    let enumTheme:ThemesMap
 }
