@@ -73,12 +73,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
             }else{
                 tvTitle.textColor = .black
             }
-        }else{
-            if(theme == "Dark"){
-                tvTitle.textColor = .white
-            }else{
-                tvTitle.textColor = .black
-            }
         }
         setFloatingButton()
     }
@@ -125,27 +119,20 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
                 mapView.mapStyle = nil
             }
         }else{
-            if(theme == "Dark"){
+            if let rawValue = UserDefaults.standard.value(forKey: "selectedTheme") as?String,
+               let selectedTheme = ThemesMap(rawValue: rawValue) {
                 do {
-                    if let styleURL = Bundle.main.url(forResource: "mapstyle_night", withExtension: "json") {
-                      mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
+                    if let styleSaveURL = selectedTheme.getMapTheme(selectedTheme).map{
+                        let styleSave = try GMSMapStyle(contentsOfFileURL: styleSaveURL)
+                        mapView.mapStyle = styleSave
+                        tvTitle.textColor = selectedTheme.getMapTheme(selectedTheme).textColor
+                    }else{
+                        mapView.mapStyle = nil
                     }
                   } catch {
                     NSLog("One or more of the map styles failed to load. \(error)")
                   }
-            }else{
-                mapView.mapStyle = nil
             }
-        }
-        
-        if let rawValue = UserDefaults.standard.value(forKey: "selectedTheme") as?String,
-           let selectedTheme = ThemesMap(rawValue: rawValue) {
-            let theme = selectedTheme.getMapTheme(selectedTheme).map
-            do {
-                mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: theme)
-              } catch {
-                NSLog("One or more of the map styles failed to load. \(error)")
-              }
         }
     }
     
