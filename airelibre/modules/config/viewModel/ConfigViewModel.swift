@@ -9,6 +9,8 @@ import Foundation
 
 class ConfigViewModel: NSObject {
     
+    var selectedIndexMapTheme = 0
+    
     func getMapThemes()-> [CircularItemModel]{
         let defaultTheme = ThemesMap.predMap.getMapTheme(.predMap)
         let uberTheme = ThemesMap.predMap.getMapTheme(.uber)
@@ -33,6 +35,17 @@ class ConfigViewModel: NSObject {
     func setSaveThemeSelected(position:Int){
         let selectedTheme = getMapThemes()[position].enumTheme
         UserDefaults.standard.set(selectedTheme.rawValue, forKey: "selectedTheme")
+    }
+    
+    func getMapThemeSelectSave(){
+        if let rawValue = UserDefaults.standard.value(forKey: "selectedTheme") as?String,
+           let selectedTheme = ThemesMap(rawValue: rawValue) {
+            if let index = getMapThemes().firstIndex(where: { $0.title == selectedTheme.getMapTheme(selectedTheme).name }) {
+                selectedIndexMapTheme = index
+            } else {
+                selectedIndexMapTheme = 0
+            }
+        }
     }
     
 }

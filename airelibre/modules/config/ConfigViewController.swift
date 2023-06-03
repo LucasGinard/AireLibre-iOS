@@ -26,7 +26,6 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
             return cv
         }()
     
-    var selectedIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,6 +52,7 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func configureUI(){
+        getSelectMapTheme()
         if #available(iOS 13.0, *){
             if(self.traitCollection.userInterfaceStyle == .dark){
                 swDarkMode.isOn = true
@@ -76,6 +76,11 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
             swLocation.isOn = false
         }
         tvVersion.text = Bundle.main.infoDictionary?["CFBundleShortVersionString"] as? String
+    }
+    
+    private func getSelectMapTheme(){
+        self.viewModel.getMapThemeSelectSave()
+        collectionView.reloadData()
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
@@ -139,8 +144,8 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
 extension ConfigViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         // Actualización del índice seleccionado y recarga de datos del collectionView
-        selectedIndex = indexPath.row
-        self.viewModel.setSaveThemeSelected(position: selectedIndex)
+        self.viewModel.selectedIndexMapTheme = indexPath.row
+        self.viewModel.setSaveThemeSelected(position: self.viewModel.selectedIndexMapTheme)
         collectionView.reloadData()
     }
 }
@@ -152,7 +157,7 @@ extension ConfigViewController: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CircularItemCell", for: indexPath) as! CircularItemCell
-        let isSelected = indexPath.row == selectedIndex
+        let isSelected = indexPath.row == self.viewModel.selectedIndexMapTheme
         cell.configure(with: viewModel.getMapThemes()[indexPath.row], isSelected: isSelected)
         return cell
     }
