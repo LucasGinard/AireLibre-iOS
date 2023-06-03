@@ -12,6 +12,8 @@
 		5203511F295FB6950007D553 /* rubik_bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A4F28E7CD4E009DA821 /* rubik_bold.ttf */; };
 		52035120295FB6950007D553 /* rubik_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5028E7CD4E009DA821 /* rubik_regular.ttf */; };
 		52035121295FB6950007D553 /* disket_regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 52669A4E28E7CD4E009DA821 /* disket_regular.ttf */; };
+		5210AFE02A2ADAC40078489E /* ThemesMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210AFDF2A2ADAC40078489E /* ThemesMap.swift */; };
+		5210AFE32A2ADB600078489E /* MapModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5210AFE22A2ADB600078489E /* MapModel.swift */; };
 		52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669A4A28E7CC40009DA821 /* ConfigViewController.swift */; };
 		52669A5328E7D42C009DA821 /* mapstyle_night.json in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5228E7D42C009DA821 /* mapstyle_night.json */; };
 		526BA09629D918A500F2D40A /* CircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BA09529D918A500F2D40A /* CircularItemModel.swift */; };
@@ -56,6 +58,8 @@
 
 /* Begin PBXFileReference section */
 		4187F73C8D25353464A77A27 /* Pods-airelibre.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-airelibre.release.xcconfig"; path = "Target Support Files/Pods-airelibre/Pods-airelibre.release.xcconfig"; sourceTree = "<group>"; };
+		5210AFDF2A2ADAC40078489E /* ThemesMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemesMap.swift; sourceTree = "<group>"; };
+		5210AFE22A2ADB600078489E /* MapModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapModel.swift; sourceTree = "<group>"; };
 		52669A4A28E7CC40009DA821 /* ConfigViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigViewController.swift; sourceTree = "<group>"; };
 		52669A4E28E7CD4E009DA821 /* disket_regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_regular.ttf; sourceTree = "<group>"; };
 		52669A4F28E7CD4E009DA821 /* rubik_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rubik_bold.ttf; sourceTree = "<group>"; };
@@ -124,6 +128,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		5210AFE12A2ADB480078489E /* mapUtils */ = {
+			isa = PBXGroup;
+			children = (
+				5210AFDF2A2ADAC40078489E /* ThemesMap.swift */,
+				5210AFE22A2ADB600078489E /* MapModel.swift */,
+			);
+			path = mapUtils;
+			sourceTree = "<group>";
+		};
 		52669A4928E7CC06009DA821 /* config */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,6 +201,7 @@
 		527FC40428D3E9A7001A5FF6 /* utils */ = {
 			isa = PBXGroup;
 			children = (
+				5210AFE12A2ADB480078489E /* mapUtils */,
 				527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */,
 				527FC40628D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift */,
 				527FC40828D3E9BE001A5FF6 /* extensions.swift */,
@@ -528,8 +542,10 @@
 				527FC40D28D3E9BE001A5FF6 /* extensions.swift in Sources */,
 				52A9783128063B00006A877D /* HomeViewController.swift in Sources */,
 				52C636E428028C99005CDBD4 /* SceneDelegate.swift in Sources */,
+				5210AFE32A2ADB600078489E /* MapModel.swift in Sources */,
 				527FC41228D3E9F2001A5FF6 /* AboutViewController.swift in Sources */,
 				52A97828280632E4006A877D /* SensorResponse.swift in Sources */,
+				5210AFE02A2ADAC40078489E /* ThemesMap.swift in Sources */,
 				527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
