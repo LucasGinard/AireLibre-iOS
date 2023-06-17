@@ -21,7 +21,20 @@ enum ThemesMap:String {
     func getMapTheme(_ theme:ThemesMap)-> MapModel{
         switch(theme){
         case .predMap:
-            return MapModel(name: "Pred", map: (UserDefaults.standard.string(forKey: "isDarkMode")  == "Dark") ? Bundle.main.url(forResource: "mapstyle_night", withExtension: "json")! : nil,textColor: (UserDefaults.standard.string(forKey: "isDarkMode") != nil) ? .white : .black,imagePreview: UIImage(named: "ThemeMapPred")! )
+            var isDarkModePhone:Bool = false
+            let theme = UserDefaults.standard.string(forKey: "isDarkMode")
+            
+            if(theme == nil){
+                var osTheme: UIUserInterfaceStyle {
+                    return UIScreen.main.traitCollection.userInterfaceStyle
+                }
+                
+                isDarkModePhone =  osTheme == .dark ? true : false
+            }else{
+                isDarkModePhone = (UserDefaults.standard.string(forKey: "isDarkMode")  == "Dark")
+            }
+            
+            return MapModel(name: "Pred", map:  isDarkModePhone ? Bundle.main.url(forResource: "mapstyle_night", withExtension: "json")! : nil,textColor: (UserDefaults.standard.string(forKey: "isDarkMode") != nil) ? .white : .black,imagePreview: UIImage(named: "ThemeMapPred")! )
         case .uber:
             return MapModel(name: "Uber", map: Bundle.main.url(forResource: "mapstyle_uber", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black,imagePreview: UIImage(named: "ThemeMapUber")!)
         case .retro:
