@@ -18,11 +18,14 @@ class AboutViewController: UIViewController {
     @IBOutlet weak var btnMastodon: UIButton!
     
     private let linkColorDark = UIColor.init("176EFF")
+    private var viewModel: AboutViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.viewModel = AboutViewModel()
         self.setupLabelClicks()
-        configureUI()
+        self.configureUI()
+        self.getListContributors()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +40,15 @@ class AboutViewController: UIViewController {
             self.tvCreator.textColor = linkColorDark
             self.tvIconApp.textColor = linkColorDark
         }
+    }
+    
+    private func getListContributors(){
+        viewModel?.onDataFetched = { [weak self] in
+            DispatchQueue.main.async {
+                
+            }
+        }
+        viewModel?.getListContributors()
     }
     
     

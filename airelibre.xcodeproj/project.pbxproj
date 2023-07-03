@@ -18,6 +18,8 @@
 		52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52669A4A28E7CC40009DA821 /* ConfigViewController.swift */; };
 		52669A5328E7D42C009DA821 /* mapstyle_night.json in Resources */ = {isa = PBXBuildFile; fileRef = 52669A5228E7D42C009DA821 /* mapstyle_night.json */; };
 		526BA09629D918A500F2D40A /* CircularItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526BA09529D918A500F2D40A /* CircularItemModel.swift */; };
+		526C907D2A52464400846498 /* AboutViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C907C2A52464400846498 /* AboutViewModel.swift */; };
+		526C90812A52469000846498 /* Contributor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 526C90802A52469000846498 /* Contributor.swift */; };
 		5274D53329B6510300B9C7E5 /* airelibreUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53229B6510300B9C7E5 /* airelibreUITests.swift */; };
 		5274D53529B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */; };
 		527FC40A28D3E9BE001A5FF6 /* CacheUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527FC40528D3E9BE001A5FF6 /* CacheUtils.swift */; };
@@ -69,6 +71,8 @@
 		52669A5128E7CD4E009DA821 /* disket_bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = disket_bold.ttf; sourceTree = "<group>"; };
 		52669A5228E7D42C009DA821 /* mapstyle_night.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = mapstyle_night.json; sourceTree = "<group>"; };
 		526BA09529D918A500F2D40A /* CircularItemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularItemModel.swift; sourceTree = "<group>"; };
+		526C907C2A52464400846498 /* AboutViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewModel.swift; sourceTree = "<group>"; };
+		526C90802A52469000846498 /* Contributor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Contributor.swift; sourceTree = "<group>"; };
 		5274D53029B6510300B9C7E5 /* airelibreUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airelibreUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5274D53229B6510300B9C7E5 /* airelibreUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITests.swift; sourceTree = "<group>"; };
 		5274D53429B6510300B9C7E5 /* airelibreUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airelibreUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -200,6 +204,30 @@
 			path = view;
 			sourceTree = "<group>";
 		};
+		526C907B2A52463000846498 /* viewModel */ = {
+			isa = PBXGroup;
+			children = (
+				526C907C2A52464400846498 /* AboutViewModel.swift */,
+			);
+			path = viewModel;
+			sourceTree = "<group>";
+		};
+		526C907E2A52464900846498 /* view */ = {
+			isa = PBXGroup;
+			children = (
+				527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */,
+			);
+			path = view;
+			sourceTree = "<group>";
+		};
+		526C907F2A52468400846498 /* model */ = {
+			isa = PBXGroup;
+			children = (
+				526C90802A52469000846498 /* Contributor.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
 		5274D53129B6510300B9C7E5 /* airelibreUITests */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,7 +253,9 @@
 		527FC41028D3E9E6001A5FF6 /* about */ = {
 			isa = PBXGroup;
 			children = (
-				527FC41128D3E9F2001A5FF6 /* AboutViewController.swift */,
+				526C907F2A52468400846498 /* model */,
+				526C907E2A52464900846498 /* view */,
+				526C907B2A52463000846498 /* viewModel */,
 			);
 			path = about;
 			sourceTree = "<group>";
@@ -543,6 +573,7 @@
 			files = (
 				52A9782B2806390B006A877D /* APIService.swift in Sources */,
 				527FC40B28D3E9BE001A5FF6 /* DialogInfoAQIViewController.swift in Sources */,
+				526C907D2A52464400846498 /* AboutViewModel.swift in Sources */,
 				527FC40C28D3E9BE001A5FF6 /* InfoAQITableViewCell.swift in Sources */,
 				52C636E228028C99005CDBD4 /* AppDelegate.swift in Sources */,
 				529D82F129DA3FC50033F26D /* CircularItemCell.swift in Sources */,
@@ -551,6 +582,7 @@
 				52669A4B28E7CC40009DA821 /* ConfigViewController.swift in Sources */,
 				52C636FA28029A3D005CDBD4 /* BaseTabBarController.swift in Sources */,
 				527FC40D28D3E9BE001A5FF6 /* extensions.swift in Sources */,
+				526C90812A52469000846498 /* Contributor.swift in Sources */,
 				52A9783128063B00006A877D /* HomeViewController.swift in Sources */,
 				52C636E428028C99005CDBD4 /* SceneDelegate.swift in Sources */,
 				5223F9092A2BCFB300C177A8 /* ConfigViewModel.swift in Sources */,
