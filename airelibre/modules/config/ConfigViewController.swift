@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  ConfigViewController.swift
 //  airelibre
 //
 //  Created by LucasG on 2022-04-09.
@@ -19,31 +19,19 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
     private var viewModel:ConfigViewModel = ConfigViewModel()
 
     let collectionView: UICollectionView = {
-            let layout = UICollectionViewFlowLayout()
-            layout.scrollDirection = .horizontal
-            let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
-            cv.showsHorizontalScrollIndicator = false
-            return cv
-        }()
-    
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        let cv = UICollectionView(frame: .zero, collectionViewLayout: layout)
+        cv.showsHorizontalScrollIndicator = false
+        return cv
+    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         manager.delegate = self
         configureUI()
         themeApp()
-        
-        collectionView.delegate = self
-        collectionView.dataSource = self
-        collectionView.register(CircularItemCell.self, forCellWithReuseIdentifier: "CircularItemCell")
-        stackThemesMaps.addArrangedSubview(collectionView)
-        collectionView.translatesAutoresizingMaskIntoConstraints = false
-
-        NSLayoutConstraint.activate([
-            collectionView.heightAnchor.constraint(equalToConstant: 120)
-        ])
-        
-        collectionView.reloadData()
+        configureCollectionThemeMaps()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -80,6 +68,20 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
     
     private func getSelectMapTheme(){
         self.viewModel.getMapThemeSelectSave()
+        collectionView.reloadData()
+    }
+    
+    private func configureCollectionThemeMaps(){
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(CircularItemCell.self, forCellWithReuseIdentifier: "CircularItemCell")
+        stackThemesMaps.addArrangedSubview(collectionView)
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+
+        NSLayoutConstraint.activate([
+            collectionView.heightAnchor.constraint(equalToConstant: 120)
+        ])
+        
         collectionView.reloadData()
     }
     
@@ -158,7 +160,7 @@ extension ConfigViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CircularItemCell", for: indexPath) as! CircularItemCell
         let isSelected = indexPath.row == self.viewModel.selectedIndexMapTheme
-        cell.configure(with: viewModel.getMapThemes()[indexPath.row], isSelected: isSelected)
+        cell.configureForMap(with: viewModel.getMapThemes()[indexPath.row], isSelected: isSelected)
         return cell
     }
 }
