@@ -9,6 +9,7 @@ target 'airelibre' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Database'
+  pod 'Firebase/Auth'
   
   pod 'MaterialComponents/Buttons'
   

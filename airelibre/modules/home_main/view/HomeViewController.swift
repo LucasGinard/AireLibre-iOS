@@ -22,7 +22,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     @IBOutlet weak var viewInfoSensor: UIView!
     @IBOutlet weak var btnCloseInfoSensor: UIButton!
     
-    private var homeViewModel:HomeViewModel!
+    private var homeViewModel:HomeViewModel = HomeViewModel()
     private var sensorList:[SensorResponse] = []
     private var sensor:SensorResponse!
     private var showSensorFavorite:Bool = true
@@ -42,6 +42,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         configureUI()
         gestureDownInfoMarker()
         mapView.isMyLocationEnabled = true
+        homeViewModel.authForGetContributors()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -106,6 +107,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
                     tvTitle.textColor = selectedTheme.getMapTheme(selectedTheme).textColor
                 }else{
                     mapView.mapStyle = nil
+                    tvTitle.textColor = selectedTheme.getMapTheme(selectedTheme).textColor
                 }
               } catch {
                 NSLog("One or more of the map styles failed to load. \(error)")
@@ -114,7 +116,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
     
     private func callService(){
-        self.homeViewModel = HomeViewModel()
         self.homeViewModel.bindHomeViewModelToController = {
             if(self.homeViewModel.sensor.count <= 0){
                 self.btnCallService.isHidden = false
