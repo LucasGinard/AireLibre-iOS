@@ -86,13 +86,13 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-        if let location = locations.last{
+        if locations.last != nil{
             swLocation.isOn = true
         }
     }
     
     @IBAction func switchDarkMode(_ sender: Any) {
-        if(UserDefaults.standard.bool(forKey: "isThemeCustom") as? Bool ?? false){
+        if(UserDefaults.standard.bool(forKey: "isThemeCustom") as Bool){
             if swDarkMode.isOn{
                 overrideUserInterfaceStyle = .dark
                 UserDefaults.standard.set("Dark", forKey: "isDarkMode")

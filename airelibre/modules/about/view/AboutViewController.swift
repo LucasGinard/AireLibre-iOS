@@ -138,6 +138,15 @@ class AboutViewController: UIViewController,UICollectionViewDelegate,UICollectio
         
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let profileContributor = self.viewModel.contributors[indexPath.row].githubContributor
+        if let url = URL(string: profileContributor) {
+            if UIApplication.shared.canOpenURL(url) {
+                UIApplication.shared.open(url, options: [:], completionHandler: nil)
+            }
+        }
+    }
 }
 
 extension AboutViewController: UICollectionViewDelegateFlowLayout {
