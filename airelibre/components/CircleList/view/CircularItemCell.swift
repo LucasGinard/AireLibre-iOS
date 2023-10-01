@@ -22,7 +22,7 @@ class CircularItemCell:UICollectionViewCell {
 
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-        titleLabel.font = UIFont(name: "rubik_bold", size: 18)
+        titleLabel.font = UIFont(name: "Rubik-Bold", size: 16)
         
         imageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -64,6 +64,9 @@ class CircularItemCell:UICollectionViewCell {
         self.titleLabel.text = contributor.nameContributor
         self.imageView.layer.borderWidth = 0
         
+        let sizeTitle = contributor.nameContributor.count > 8 ? 8 : 10
+        self.titleLabel.font = UIFont(name: "Rubik-Bold", size: CGFloat(sizeTitle))
+ 
         let imageURLString = contributor.profileImage
         
         if let imageURL = URL(string: imageURLString) {
