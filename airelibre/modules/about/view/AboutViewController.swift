@@ -22,6 +22,20 @@ class AboutViewController: UIViewController,UICollectionViewDelegate,UICollectio
     private let linkColorDark = UIColor.init("176EFF")
     private var viewModel: AboutViewModel = AboutViewModel()
     
+    private lazy var contributorSection:UIStackView = {
+        let stackview = UIStackView()
+        stackview.axis = .vertical
+        stackview.alignment = .center
+        
+        let titleContributor = UILabel()
+        titleContributor.text = "Contribuidores del proyecto"
+        titleContributor.font = UIFont(name: "Rubik-Bold", size: 18)
+        
+        stackview.addArrangedSubview(titleContributor)
+        
+        return stackview
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setupLabelClicks()
@@ -53,7 +67,11 @@ class AboutViewController: UIViewController,UICollectionViewDelegate,UICollectio
         collectionView.backgroundColor = .clear
         collectionView.delegate = self
         collectionView.dataSource = self
-        containerStack.insertArrangedSubview(collectionView, at: 7)
+    }
+    
+    private func setSectionContributorIntoView(){
+        contributorSection.addArrangedSubview(collectionView)
+        containerStack.insertArrangedSubview(contributorSection, at: 7)
         
         collectionView.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
@@ -62,12 +80,19 @@ class AboutViewController: UIViewController,UICollectionViewDelegate,UICollectio
             collectionView.heightAnchor.constraint(equalToConstant: 120)
         ])
         
-        collectionView.reloadData()
     }
     
     private func getListContributors(){
         self.viewModel.onDataFetched = { [weak self] in
             DispatchQueue.main.async {
+                if (self?.viewModel.contributors.isEmpty ?? true) {
+                    guard let contributorSection  = self?.contributorSection else{
+                        return
+                    }
+                    self?.containerStack.removeArrangedSubview(contributorSection)
+                }else{
+                    self?.setSectionContributorIntoView()
+                }
                 self?.collectionView.reloadData()
             }
         }
