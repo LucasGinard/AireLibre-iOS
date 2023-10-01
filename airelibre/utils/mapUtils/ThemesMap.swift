@@ -34,7 +34,7 @@ enum ThemesMap:String {
                 isDarkModePhone = (UserDefaults.standard.string(forKey: "isDarkMode")  == "Dark")
             }
             
-            return MapModel(name: "Pred", map:  isDarkModePhone ? Bundle.main.url(forResource: "mapstyle_night", withExtension: "json")! : nil,textColor: (UserDefaults.standard.string(forKey: "isDarkMode") != nil) ? .white : .black,imagePreview: UIImage(named: "ThemeMapPred")! )
+            return MapModel(name: "Pred", map:  isDarkModePhone ? Bundle.main.url(forResource: "mapstyle_night", withExtension: "json")! : nil,textColor: isDarkModePhone ? .white : .black,imagePreview: UIImage(named: "ThemeMapPred")! )
         case .uber:
             return MapModel(name: "Uber", map: Bundle.main.url(forResource: "mapstyle_uber", withExtension: "json") ?? URL(fileURLWithPath: ""),textColor: .black,imagePreview: UIImage(named: "ThemeMapUber")!)
         case .retro:
