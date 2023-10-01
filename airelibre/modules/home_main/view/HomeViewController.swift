@@ -22,11 +22,10 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     @IBOutlet weak var viewInfoSensor: UIView!
     @IBOutlet weak var btnCloseInfoSensor: UIButton!
     
-    private var homeViewModel:HomeViewModel!
+    private var homeViewModel:HomeViewModel = HomeViewModel()
     private var sensorList:[SensorResponse] = []
     private var sensor:SensorResponse!
     private var showSensorFavorite:Bool = true
-    private var theme = UserDefaults.standard.string(forKey: "isDarkMode")
     
     private let manager = CLLocationManager()
     private var mapView:GMSMapView!
@@ -43,6 +42,7 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
         configureUI()
         gestureDownInfoMarker()
         mapView.isMyLocationEnabled = true
+        homeViewModel.authForGetContributors()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -67,13 +67,6 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     
     
     private func configureUI(){
-        if(theme == nil){
-            if(self.traitCollection.userInterfaceStyle == .dark){
-                tvTitle.textColor = .white
-            }else{
-                tvTitle.textColor = .black
-            }
-        }
         setFloatingButton()
     }
 
@@ -105,39 +98,24 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     }
     
     private func mapTheme(){
-        theme = UserDefaults.standard.string(forKey: "isDarkMode")
-        if(theme == nil){
-            if self.traitCollection.userInterfaceStyle == .dark {
-                do {
-                    if let styleURL = Bundle.main.url(forResource: "mapstyle_night", withExtension: "json") {
-                      mapView.mapStyle = try GMSMapStyle(contentsOfFileURL: styleURL)
-                    }
-                  } catch {
-                    NSLog("One or more of the map styles failed to load. \(error)")
-                  }
-            } else {
-                mapView.mapStyle = nil
-            }
-        }else{
-            if let rawValue = UserDefaults.standard.value(forKey: "selectedTheme") as?String,
-               let selectedTheme = ThemesMap(rawValue: rawValue) {
-                do {
-                    if let styleSaveURL = selectedTheme.getMapTheme(selectedTheme).map{
-                        let styleSave = try GMSMapStyle(contentsOfFileURL: styleSaveURL)
-                        mapView.mapStyle = styleSave
-                        tvTitle.textColor = selectedTheme.getMapTheme(selectedTheme).textColor
-                    }else{
-                        mapView.mapStyle = nil
-                    }
-                  } catch {
-                    NSLog("One or more of the map styles failed to load. \(error)")
-                  }
-            }
+        if let rawValue = UserDefaults.standard.value(forKey: "selectedTheme") as?String,
+           let selectedTheme = ThemesMap(rawValue: rawValue) {
+            do {
+                if let styleSaveURL = selectedTheme.getMapTheme(selectedTheme).map{
+                    let styleSave = try GMSMapStyle(contentsOfFileURL: styleSaveURL)
+                    mapView.mapStyle = styleSave
+                    tvTitle.textColor = selectedTheme.getMapTheme(selectedTheme).textColor
+                }else{
+                    mapView.mapStyle = nil
+                    tvTitle.textColor = selectedTheme.getMapTheme(selectedTheme).textColor
+                }
+              } catch {
+                NSLog("One or more of the map styles failed to load. \(error)")
+              }
         }
     }
     
     private func callService(){
-        self.homeViewModel = HomeViewModel()
         self.homeViewModel.bindHomeViewModelToController = {
             if(self.homeViewModel.sensor.count <= 0){
                 self.btnCallService.isHidden = false

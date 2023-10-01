@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nUS-tg-opI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nUS-tg-opI">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -29,7 +29,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oRg-L6-uqX">
-                                <rect key="frame" x="15" y="193.5" width="384" height="509"/>
+                                <rect key="frame" x="15" y="221" width="384" height="454"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="¿Qué es AireLibre?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r7J-at-h6y">
                                         <rect key="frame" x="118" y="0.0" width="148.5" height="19"/>
@@ -135,26 +135,14 @@
                                             </label>
                                         </subviews>
                                     </stackView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="App desarrollada por:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Gg-oc-GAj">
-                                        <rect key="frame" x="106.5" y="409" width="171" height="19"/>
-                                        <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Lucas Ginard" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j5W-X7-sA1">
-                                        <rect key="frame" x="133.5" y="438" width="117.5" height="16"/>
-                                        <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="14"/>
-                                        <color key="textColor" systemColor="linkColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Imagen Ilustrativa original de:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A5Y-fa-hly">
-                                        <rect key="frame" x="73" y="464" width="238.5" height="19"/>
+                                        <rect key="frame" x="73" y="409" width="238.5" height="19"/>
                                         <fontDescription key="fontDescription" name="Rubik-Bold" family="Rubik" pointSize="16"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="pch.vector - www.freepik.es" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXW-A3-J2I">
-                                        <rect key="frame" x="60.5" y="493" width="263.5" height="16"/>
+                                        <rect key="frame" x="60.5" y="438" width="263.5" height="16"/>
                                         <fontDescription key="fontDescription" name="DisketMono-Bold" family="Disket Mono" pointSize="14"/>
                                         <color key="textColor" systemColor="linkColor"/>
                                         <nil key="highlightedColor"/>
@@ -165,7 +153,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="oRg-L6-uqX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="F9L-5Q-Ixx"/>
+                            <constraint firstItem="oRg-L6-uqX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="48F-49-G0e"/>
                             <constraint firstAttribute="trailing" secondItem="oRg-L6-uqX" secondAttribute="trailing" constant="15" id="k7l-Em-aZG"/>
                             <constraint firstItem="oRg-L6-uqX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="lB0-OA-DX7"/>
                         </constraints>
@@ -175,7 +163,7 @@
                         <outlet property="btnMastodon" destination="CjD-OJ-d43" id="JxV-KY-aRB"/>
                         <outlet property="btnTwitter" destination="GwT-Bc-jO3" id="2M3-Fa-buP"/>
                         <outlet property="btnWeb" destination="HkO-Dd-AOf" id="djf-ce-rA1"/>
-                        <outlet property="tvCreator" destination="j5W-X7-sA1" id="V6a-gx-i3u"/>
+                        <outlet property="containerStack" destination="oRg-L6-uqX" id="JhE-iN-ftj"/>
                         <outlet property="tvIconApp" destination="YXW-A3-J2I" id="suU-2Y-d4G"/>
                         <outlet property="tvLicense" destination="Gso-DV-7md" id="ElT-7q-Mko"/>
                         <outlet property="tvSeeProject" destination="THn-4k-Uop" id="UUU-Lj-cfN"/>

@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Firebase
 
 class HomeViewModel: NSObject {
     
@@ -27,6 +28,19 @@ class HomeViewModel: NSObject {
     func callFuncToGetEmpData() {
         self.apiService.apiToGetSensorData { (sensor) in
             self.sensor = sensor
+        }
+    }
+    
+    func authForGetContributors(){
+        Auth.auth().signInAnonymously { authResult, error in
+            if let error = error {
+                print("Error en la autenticación anónima: \(error.localizedDescription)")
+                return
+            }
+            
+            if let user = authResult?.user {
+                print("Autenticación anónima exitosa. UID: \(user.uid)")
+            }
         }
     }
 }

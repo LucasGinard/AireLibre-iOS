@@ -8,6 +8,9 @@ target 'airelibre' do
   pod 'GoogleMaps', '4.0.0'
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Auth'
+  
   pod 'MaterialComponents/Buttons'
   
   post_install do |installer|
