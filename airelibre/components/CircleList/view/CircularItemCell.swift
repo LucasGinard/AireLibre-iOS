@@ -22,7 +22,8 @@ class CircularItemCell:UICollectionViewCell {
 
         titleLabel.textAlignment = .center
         titleLabel.numberOfLines = 0
-
+        titleLabel.font = UIFont(name: "rubik_bold", size: 18)
+        
         imageView.translatesAutoresizingMaskIntoConstraints = false
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
 
@@ -38,8 +39,7 @@ class CircularItemCell:UICollectionViewCell {
 
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 5),
-            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 2)
+            titleLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor)
         ])
     }
     
@@ -47,15 +47,44 @@ class CircularItemCell:UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(with model: CircularItemModel, isSelected: Bool) {
-        imageView.image = model.image
-        titleLabel.text = model.title
+    func configureForMap(with model: CircularItemModel, isSelected: Bool) {
+        self.imageView.image = model.image
+        self.titleLabel.text = model.title
         
         if isSelected {
-            imageView.layer.borderWidth = 2
-            imageView.layer.borderColor = UIColor.green.cgColor
+            self.imageView.layer.borderWidth = 2
+            self.imageView.layer.borderColor = UIColor.green.cgColor
         } else {
-            imageView.layer.borderWidth = 0
+            self.imageView.layer.borderWidth = 0
         }
+    }
+    
+    func configureForContributor(with contributor: Contributor) {
+        self.contentView.backgroundColor = .clear
+        self.titleLabel.text = contributor.nameContributor
+        self.imageView.layer.borderWidth = 0
+        
+        let imageURLString = contributor.profileImage
+        
+        if let imageURL = URL(string: imageURLString) {
+            let task = URLSession.shared.dataTask(with: imageURL) { [weak self] (data, response, error) in
+                if let error = error {
+                    print("Error downloading image: \(error)")
+                    return
+                }
+                
+                guard let data = data, let image = UIImage(data: data) else {
+                    print("Invalid image data")
+                    return
+                }
+                
+                DispatchQueue.main.async {
+                    self?.imageView.image = image
+                }
+            }
+            
+            task.resume()
+        }
+        
     }
 }

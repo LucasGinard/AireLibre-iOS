@@ -145,7 +145,6 @@ class ConfigViewController: UIViewController, CLLocationManagerDelegate {
 
 extension ConfigViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // Actualización del índice seleccionado y recarga de datos del collectionView
         self.viewModel.selectedIndexMapTheme = indexPath.row
         self.viewModel.setSaveThemeSelected(position: self.viewModel.selectedIndexMapTheme)
         collectionView.reloadData()
