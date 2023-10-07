@@ -20,5 +20,8 @@ jobs:
     - name: build app
       uses: ty0x2333/cocoapods-action@master
       with:
-        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.0'
+        additional_lint_params: --private
         lint: false
+        workspace: airelibre.xcworkspace
+        scheme: airelibre
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.0'
