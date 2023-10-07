@@ -1,26 +1,28 @@
 name: Install pods and build iOS
 
-on: 
+on:
   push:
-      branches: [ "main" ]
+    branches:
+      - main
   pull_request:
-      branches: [ "main" ]
+    branches:
+      - main
 
 jobs:
   build:
 
     runs-on: macOS-latest
-    
-    steps:
-    
-    - name: Checkout Code
-      uses: actions/checkout@v2
-      
-    - name: Install Dependences
-      run: |
-        pod install
-      shell: bash
-      
-    - name: Run tests
-      run: xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination "platform=iOS Simulator,OS=16.3, name=iPhone 12 mini" | xcpretty && exit ${PIPESTATUS[0]}
 
+    steps:
+
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Install Dependences
+        run: |
+          pod install
+        shell: bash
+
+      - name: Run tests
+        run: |
+          xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination "platform=iOS Simulator,name=iPhone 12 mini,OS=16.3" | xcpretty && exit ${PIPESTATUS[0]}
