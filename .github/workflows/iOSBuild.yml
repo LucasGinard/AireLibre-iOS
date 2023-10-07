@@ -12,16 +12,20 @@ jobs:
     runs-on: macOS-latest
     
     steps:
-    - uses: actions/checkout@master
+    
+    - name: Checkout Code
+      uses: actions/checkout@v2
+      
     - name: Install Dependences
       run: |
         pod install
       shell: bash
+      
     - name: build app
       uses: ty0x2333/cocoapods-action@master
       with:
         additional_lint_params: --private
-        lint: false
+        lint: true
         workspace: airelibre.xcworkspace
         scheme: airelibre
         additional_build_params: -destination 'platform:iOS Simulator, id:177FF294-EE49-4E55-9B79-BC19FEE2D1C0, OS:16.2, name:iPhone 13'
