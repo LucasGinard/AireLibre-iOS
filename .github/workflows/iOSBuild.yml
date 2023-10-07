@@ -24,4 +24,4 @@ jobs:
         lint: false
         workspace: airelibre.xcworkspace
         scheme: airelibre
-        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.0'
+        additional_build_params: -destination 'platform:iOS Simulator, id:177FF294-EE49-4E55-9B79-BC19FEE2D1C0, OS:16.2, name:iPhone 13'
