@@ -21,11 +21,8 @@ jobs:
         pod install
       shell: bash
       
-    - name: build app
-      uses: ty0x2333/cocoapods-action@master
-      with:
-        additional_lint_params: --private
-        lint: true
-        workspace: airelibre.xcworkspace
-        scheme: airelibre
-        additional_build_params: -destination 'platform:iOS Simulator, id:177FF294-EE49-4E55-9B79-BC19FEE2D1C0, OS:16.2, name:iPhone 13'
+    - name: Select Xcode
+      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
+
+    - name: Run tests
+      run: xcodebuild test -scheme airelibre -project airelibre.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.0' | xcpretty && exit ${PIPESTATUS[0]}
