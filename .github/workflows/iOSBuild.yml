@@ -22,5 +22,5 @@ jobs:
       shell: bash
       
     - name: Run tests
-      run: xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination 'platform:iOS Simulator, id:59C103D2-0666-4D23-BA77-3E0B030F5A76, OS:16.2, name:iPhone 12 min' | xcpretty && exit ${PIPESTATUS[0]}
+      run: xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination "platform:iOS Simulator, id:59C103D2-0666-4D23-BA77-3E0B030F5A76, OS:16.2, name:iPhone 12 min" | xcpretty && exit ${PIPESTATUS[0]}
 
