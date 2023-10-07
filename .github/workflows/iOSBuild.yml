@@ -21,8 +21,5 @@ jobs:
         pod install
       shell: bash
       
-    - name: Select Xcode
-      run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
-
     - name: Run tests
       run: xcodebuild test -scheme airelibre -project airelibre.xcworkspace -destination 'platform=iOS Simulator,name=iPhone 12,OS=15.0' | xcpretty && exit ${PIPESTATUS[0]}
