@@ -1,0 +1,26 @@
+name: Install pods and build iOS
+
+on: 
+  push:
+      branches: [ "main" ]
+  pull_request:
+      branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: macOS-latest
+    
+    steps:
+    - uses: actions/checkout@master
+    - name: Switch XCode Version
+      run: sudo xcode-select -s /Applications/Xcode_14.app
+    - name: Install Dependences
+      run: |
+        pod install
+      shell: bash
+    - name: build app
+      uses: ty0x2333/cocoapods-action@master
+      with:
+        additional_build_params: -destination 'platform=iOS Simulator,name=iPhone 12,OS=16.0'
+        lint: false
