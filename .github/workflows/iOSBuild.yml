@@ -25,4 +25,4 @@ jobs:
 
       - name: Run tests
         run: |
-          xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination "platform=iOS Simulator,name=iPhone 12 mini,OS=16.3" | xcpretty && exit ${PIPESTATUS[0]}
+          xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination "platform:iOS Simulator, id:4AEDBFB6-CA0D-47F5-A24B-EDD2AA170EBC, OS:16.2, name:iPhone 8" | xcpretty && exit ${PIPESTATUS[0]}
