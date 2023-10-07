@@ -17,12 +17,16 @@ jobs:
 
       - name: Checkout Code
         uses: actions/checkout@v2
-
+        
       - name: Install Dependences
         run: |
           pod install
         shell: bash
-
-      - name: Run tests
-        run: |
-          xcodebuild test -scheme airelibre -workspace airelibre.xcworkspace -destination "platform=iOS Simulator, id=4AEDBFB6-CA0D-47F5-A24B-EDD2AA170EBC, OS=16.2, name=iPhone 8" | xcpretty && exit ${PIPESTATUS[0]}
+        
+      - name: Build and Test🔨
+        uses: sersoft-gmbh/xcodebuild-action@v2
+        with:
+          workspace: airelibre.xcworkspace
+          scheme: airelibre
+          destination: 'platform=iOS Simulator,name=iPhone 14'
+          action: test
