@@ -142,10 +142,8 @@ class HomeViewController: UIViewController,CLLocationManagerDelegate,GMSMapViewD
     
     func mapView(_ mapView: GMSMapView, didTap marker: GMSMarker) -> Bool {
         let markerObj = sensorList.filter {$0.description.contains(marker.title!)}
-         if(marker != nil){
-             mapView.selectedMarker = marker
-             onClickInfoSensor(sensor: markerObj[0])
-         }
+        mapView.selectedMarker = marker
+        onClickInfoSensor(sensor: markerObj[0])
             
         return true
     }

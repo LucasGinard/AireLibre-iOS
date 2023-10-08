@@ -10,7 +10,6 @@ import Foundation
 class APIService:NSObject {
     
     func getDateURL() -> String{
-        let date = Date()
         let dateString = Date().addingTimeInterval(-(60 * 60))
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"

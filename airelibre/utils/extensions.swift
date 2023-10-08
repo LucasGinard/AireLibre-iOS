@@ -93,7 +93,6 @@ extension UIViewController{
             case 201...300:  return UIImage(named:"MarkerPurple")
             default: return UIImage(named:"MarkerDanger")
         }
-        return nil
     }
     
     func qualityScaleText(index:Int)->String{
