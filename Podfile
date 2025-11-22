@@ -5,7 +5,10 @@ target 'airelibre' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   # Pods for airelibre
-  pod 'GoogleMaps', '4.0.0'
+  pod 'GoogleMaps', '>= 8.4.0'
+  pod 'GoogleMapsBase', '>= 8.4.0'
+  pod 'GoogleMapsMaps', '>= 8.4.0'
+
   pod 'Firebase/Analytics'
   pod 'Firebase/Crashlytics'
   pod 'Firebase/Database'
